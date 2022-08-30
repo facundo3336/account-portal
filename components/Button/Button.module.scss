@@ -1,0 +1,82 @@
+@import "../../styles/colors.scss";
+
+.button {
+  padding: 15px;
+  border: 2px solid;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
+    background-color: map-get($colors, "primary");
+    color: white;
+    border-color: map-get($colors, "primary");
+
+    &:hover {
+      background-color: white;
+      color: map-get($colors, "primary");
+    }
+  }
+
+  &.secondary {
+    background-color: map-get($colors, "secondary");
+    color: white;
+    border-color: map-get($colors, "secondary");
+
+    &:hover {
+      background-color: white;
+      color: map-get($colors, "secondary");
+    }
+  }
+
+  &.primary-light {
+    background-color: map-get($colors, "primary-light");
+    color: black;
+    border-color: black;
+
+    &:hover {
+      background-color: black;
+      color: map-get($colors, "primary-light");
+    }
+  }
+
+  &.primary-dark {
+    background-color: map-get($colors, "primary-dark");
+    color: white;
+    border-color: map-get($colors, "primary-dark");
+
+    &:hover {
+      background-color: white;
+      color: map-get($colors, "primary-dark");
+    }
+  }
+
+  &.secondary-light {
+    color: black;
+    background-color: map-get($colors, "secondary-light");
+    border-color: black;
+
+    &:hover {
+      color: map-get($colors, "secondary-light");
+
+      background-color: black;
+    }
+  }
+
+  &.secondary-dark {
+    background-color: map-get($colors, "secondary-dark");
+    color: white;
+    border-color: map-get($colors, "secondary-dark");
+
+    &:hover {
+      background-color: white;
+      color: map-get($colors, "secondary-dark");
+    }
+  }
+}
