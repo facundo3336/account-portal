@@ -1,0 +1,27 @@
+.card {
+  background-color: white;
+  box-shadow: -1px 1px 5px 2px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: -1px 1px 5px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: -1px 1px 5px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+
+  &.sm {
+    max-width: 300px;
+  }
+
+  &.md {
+    max-width: 500px;
+  }
+
+  &.lg {
+    max-width: 900px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 45px;
+  }
+}
