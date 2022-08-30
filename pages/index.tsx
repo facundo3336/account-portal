@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Input } from "../components/Input/Input";
 import { Button, ButtonColor } from "../components/Button/Button";
 import { Card } from "../components/Card/Card";
 import styles from "../styles/Home.module.css";

@@ -1,0 +1,31 @@
+@import "../../styles/colors.scss";
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 10px;
+  }
+}
+
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+
+  a {
+    color: map-get($colors, "primary-light");
+
+    &:hover {
+      color: map-get($colors, "secondary-dark");
+    }
+  }
+}
+
+.input {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid map-get($colors, "lighterGrey");
+}
