@@ -1,8 +1,17 @@
 import styles from "./Button.module.scss";
 
+export enum ButtonColor {
+  Primary = "primary",
+  PrimaryLight = "primary-light",
+  PrimaryDark = "primary-dark",
+  Secondary = "secondary",
+  SecondaryLight = "secondary-light",
+  SecondaryDark = "secondary-dark",
+}
+
 interface Props {
   children: React.ReactNode;
-  color: string;
+  color: ButtonColor;
   onClick: () => void;
 }
 
