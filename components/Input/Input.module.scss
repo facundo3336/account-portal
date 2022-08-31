@@ -12,8 +12,12 @@
 .labelContainer {
   display: flex;
   justify-content: space-between;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
+
+  label {
+    display: block;
+  }
 
   a {
     color: map-get($colors, "primary-light");
@@ -28,4 +32,10 @@
   padding: 7px;
   border-radius: 5px;
   border: 2px solid map-get($colors, "lighterGrey");
+}
+
+@media screen and (min-width: 768px) {
+  .labelContainer {
+    font-size: 1rem;
+  }
 }
