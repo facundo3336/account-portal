@@ -1,0 +1,49 @@
+@import "../../styles/colors.scss";
+
+.loginPage {
+  .loginPageContent {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+  }
+
+  .checkBoxLoginContainer {
+    width: 200px;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+
+  .accountAskContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .accountAsk {
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+
+    a {
+      margin-left: 5px;
+      color: map-get($colors, "primary-light");
+
+      &:hover {
+        color: map-get($colors, "secondary-dark");
+      }
+    }
+  }
+
+  .inputsContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+}
