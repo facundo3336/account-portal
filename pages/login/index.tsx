@@ -48,7 +48,7 @@ const Login: NextPage = () => {
                 onChange={onChangeEmail}
               />
               <Input
-                type="text"
+                type="password"
                 label="Contraseña"
                 value={data.password}
                 onChange={onChangePassword}
