@@ -6,17 +6,20 @@ import styles from "./Login.module.scss";
 import { Checkbox } from "../../components/Checkbox/CheckBox";
 import { Button, ButtonColor } from "../../components/Button/Button";
 import Link from "next/link";
+import { User } from "../../types";
 
 const Login: NextPage = () => {
-  const [data, setData] = useState({
-    name: "",
+  const [data, setData] = useState<User>({
     email: "",
+    password: "",
   });
 
-  const onChangeName = (value: string) => {
+  const [error, setError] = useState<string | undefined>();
+
+  const onChangePassword = (value: string) => {
     setData({
       ...data,
-      name: value,
+      password: value,
     });
   };
 
@@ -25,6 +28,14 @@ const Login: NextPage = () => {
       ...data,
       email: value,
     });
+  };
+
+  const onClickLogUser = async () => {
+    const loginResponse = await login(data);
+
+    if (loginResponse.success === false) {
+      setError(loginResponse.error);
+    }
   };
 
   return (
@@ -41,18 +52,21 @@ const Login: NextPage = () => {
                 onChange={onChangeEmail}
               />
               <Input
-                type="text"
+                type="password"
                 label="Contraseña"
-                value={data.name}
-                onChange={onChangeName}
+                value={data.password}
+                onChange={onChangePassword}
                 link={{ label: "Olvidaste tu contraseña?", url: "" }}
               />
               <div className={styles.checkBoxLoginContainer}>
                 <Checkbox label="Recordarme" />
               </div>
-              <Button color={ButtonColor.Primary} onClick={() => {}}>
+              <Button color={ButtonColor.Primary} onClick={onClickLogUser}>
                 Continuar
               </Button>
+              {error !== undefined && (
+                <span className={styles.errorUserSpan}>{error}</span>
+              )}
             </div>
           </div>
         </Card>
@@ -64,6 +78,46 @@ const Login: NextPage = () => {
       </div>
     </div>
   );
+};
+
+export const getToken = async (data: User) => {
+  const tokenResponse = await fetch(`http://localhost:3000/auth/login`, {
+    method: "POST",
+    body: JSON.stringify({
+      username: data.email,
+      password: data.password,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+  });
+
+  const tokenData = await tokenResponse.json();
+
+  if (tokenResponse.status === 201) {
+    return tokenData;
+  } else {
+    return undefined;
+  }
+};
+
+const login = async (data: User) => {
+  const token = await getToken(data);
+
+  if (token !== undefined) {
+    localStorage.setItem("access_token", token);
+
+    return {
+      success: true,
+      error: undefined,
+    };
+  }
+
+  return {
+    success: false,
+    error: "Ocurrió un error al realizar la autenticación",
+  };
 };
 
 export default Login;
