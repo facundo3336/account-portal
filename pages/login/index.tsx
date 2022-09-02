@@ -14,7 +14,7 @@ const Login: NextPage = () => {
     password: "",
   });
 
-  const [isUserRight, setIsUserRight] = useState<boolean>(true);
+  const [error, setError] = useState<string | undefined>();
 
   const onChangePassword = (value: string) => {
     setData({
@@ -31,7 +31,7 @@ const Login: NextPage = () => {
   };
 
   const onClickLogUser = () => {
-    getToken(data, setIsUserRight);
+    getToken(data, setError);
   };
 
   return (
@@ -60,8 +60,8 @@ const Login: NextPage = () => {
               <Button color={ButtonColor.Primary} onClick={onClickLogUser}>
                 Continuar
               </Button>
-              {!isUserRight && (
-                <span className={styles.errorUserSpan}>Usuario Erroneo</span>
+              {error !== undefined && (
+                <span className={styles.errorUserSpan}>{error}</span>
               )}
             </div>
           </div>
@@ -78,7 +78,7 @@ const Login: NextPage = () => {
 
 export const getToken = async (
   data: User,
-  setIsUserRight: (isUserRight: boolean) => void
+  setError: (error: string | undefined) => void
 ) => {
   const tokenResponse = await fetch(`http://localhost:3000/auth/login`, {
     method: "POST",
@@ -96,10 +96,10 @@ export const getToken = async (
 
   if (tokenResponse.status === 201) {
     localStorage.setItem("access_token", tokenData.access_token);
-    setIsUserRight(true);
+    setError(undefined);
   }
 
-  setIsUserRight(false);
+  setError("Ocurrió un error al realizar la autenticación");
 };
 
 export default Login;
