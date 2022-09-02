@@ -30,8 +30,12 @@ const Login: NextPage = () => {
     });
   };
 
-  const onClickLogUser = () => {
-    getToken(data, setError);
+  const onClickLogUser = async () => {
+    const loginResponse = await login(data);
+
+    if (loginResponse.success === false) {
+      setError(loginResponse.error);
+    }
   };
 
   return (
@@ -76,10 +80,7 @@ const Login: NextPage = () => {
   );
 };
 
-export const getToken = async (
-  data: User,
-  setError: (error: string | undefined) => void
-) => {
+export const getToken = async (data: User) => {
   const tokenResponse = await fetch(`http://localhost:3000/auth/login`, {
     method: "POST",
     body: JSON.stringify({
@@ -95,11 +96,28 @@ export const getToken = async (
   const tokenData = await tokenResponse.json();
 
   if (tokenResponse.status === 201) {
-    localStorage.setItem("access_token", tokenData.access_token);
-    setError(undefined);
+    return tokenData;
+  } else {
+    return undefined;
+  }
+};
+
+const login = async (data: User) => {
+  const token = await getToken(data);
+
+  if (token !== undefined) {
+    localStorage.setItem("access_token", token);
+
+    return {
+      success: true,
+      error: undefined,
+    };
   }
 
-  setError("Ocurrió un error al realizar la autenticación");
+  return {
+    success: false,
+    error: "Ocurrió un error al realizar la autenticación",
+  };
 };
 
 export default Login;
