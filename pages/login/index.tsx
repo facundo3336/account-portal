@@ -14,6 +14,8 @@ const Login: NextPage = () => {
     password: "",
   });
 
+  const [isUserRight, setIsUserRight] = useState<boolean>(true);
+
   const onChangePassword = (value: string) => {
     setData({
       ...data,
@@ -29,7 +31,7 @@ const Login: NextPage = () => {
   };
 
   const onClickLogUser = () => {
-    getToken(data);
+    getToken(data, setIsUserRight);
   };
 
   return (
@@ -58,6 +60,9 @@ const Login: NextPage = () => {
               <Button color={ButtonColor.Primary} onClick={onClickLogUser}>
                 Continuar
               </Button>
+              {!isUserRight && (
+                <span className={styles.errorUserSpan}>Usuario Erroneo</span>
+              )}
             </div>
           </div>
         </Card>
@@ -71,7 +76,10 @@ const Login: NextPage = () => {
   );
 };
 
-export const getToken = async (data: User) => {
+export const getToken = async (
+  data: User,
+  setIsUserRight: (isUserRight: boolean) => void
+) => {
   const tokenResponse = await fetch(`http://localhost:3000/auth/login`, {
     method: "POST",
     body: JSON.stringify({
@@ -88,7 +96,10 @@ export const getToken = async (data: User) => {
 
   if (tokenResponse.status === 201) {
     localStorage.setItem("access_token", tokenData.access_token);
+    setIsUserRight(true);
   }
+
+  setIsUserRight(false);
 };
 
 export default Login;
