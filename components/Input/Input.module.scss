@@ -21,6 +21,7 @@
 
   a {
     color: map-get($colors, "primary-light");
+    text-align: right;
 
     &:hover {
       color: map-get($colors, "secondary-dark");
@@ -34,7 +35,7 @@
   border: 2px solid map-get($colors, "lighterGrey");
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .labelContainer {
     font-size: 1rem;
   }
