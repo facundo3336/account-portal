@@ -8,7 +8,7 @@ import Link from "next/link";
 import { User } from "../../types";
 import { login } from "../../utils/auth";
 import Router from "next/router";
-import { createUser } from "../../api/auth";
+import { createUser, getUser } from "../../api/auth";
 import { UserContext } from "../../context/user-context";
 
 const Login: NextPage = () => {
@@ -19,7 +19,7 @@ const Login: NextPage = () => {
     password: "",
   });
 
-  const { setUser } = useContext(UserContext);
+  const { setAccessToken } = useContext(UserContext);
 
   const [error, setError] = useState<string | undefined>();
 
@@ -42,8 +42,8 @@ const Login: NextPage = () => {
 
     const loginResponse = await login(data);
 
-    if (loginResponse.success === true) {
-      setUser(data);
+    if (loginResponse.success !== undefined) {
+      setAccessToken(loginResponse.token);
       Router.push("/");
     } else {
       setError(loginResponse.error);

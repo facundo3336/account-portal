@@ -16,7 +16,7 @@ const Login: NextPage = () => {
     email: "",
     password: "",
   });
-  const { setUser } = useContext(UserContext);
+  const { setAccessToken } = useContext(UserContext);
 
   const [error, setError] = useState<string | undefined>();
 
@@ -29,8 +29,11 @@ const Login: NextPage = () => {
 
   const onClickLogUser = async () => {
     setLoading(true);
-    setUser(data);
     const loginResponse = await login(data);
+
+    if (loginResponse.success === true) {
+      setAccessToken(loginResponse.token);
+    }
 
     if (loginResponse.success === false) {
       setError(loginResponse.error);

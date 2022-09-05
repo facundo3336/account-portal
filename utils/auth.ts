@@ -5,12 +5,12 @@ import { User } from "../types";
 
 export const login = async (data: User) => {
   const token = await getToken(data);
-  console.log(token);
 
   if (token !== undefined) {
     localStorage.setItem("access_token", token.access_token);
 
     return {
+      token: token.access_token,
       success: true,
       error: undefined,
     };
