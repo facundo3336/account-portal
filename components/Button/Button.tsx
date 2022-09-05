@@ -13,13 +13,14 @@ interface Props {
   children: React.ReactNode;
   color: ButtonColor;
   onClick: () => void;
+  disable?: boolean;
 }
 
-export const Button = ({ children, color, onClick }: Props) => {
+export const Button = ({ children, color, onClick, disable }: Props) => {
   const classNames = [styles.button, styles[color]].join(" ");
 
   return (
-    <button onClick={onClick} className={classNames}>
+    <button disabled={disable} onClick={onClick} className={classNames}>
       {children}
     </button>
   );

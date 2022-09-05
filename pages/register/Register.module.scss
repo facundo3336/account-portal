@@ -1,0 +1,119 @@
+@import "../../styles/colors.scss";
+
+.registerPage {
+  display: flex;
+  flex-direction: column;
+  .registerPageContent {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    order: 1;
+  }
+
+  .errorUserSpan {
+    color: red;
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+
+  .accountAskContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .accountAsk {
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+
+    a {
+      margin-left: 5px;
+      color: map-get($colors, "primary-light");
+
+      &:hover {
+        color: map-get($colors, "secondary-dark");
+      }
+    }
+  }
+
+  .inputsContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .registerInfoBox {
+    order: 2;
+    margin: 50px auto 0 auto;
+    max-width: 300px;
+  }
+
+  .registerInfoBoxContainer {
+    display: flex;
+    padding-bottom: 30px;
+  }
+
+  .checkCircleDiv {
+    margin: 2px;
+    background-image: url("../../public/tic.svg");
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-color: map-get($colors, "primary");
+    padding: 10px;
+    border-radius: 100%;
+  }
+
+  .registerInfoContent {
+    margin-left: 15px;
+    width: 100%;
+    h4 {
+      margin-bottom: 5px;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin-top: 0;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .registerPage {
+    padding-top: 100px;
+
+    .registerInfoBox {
+      max-width: 450px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .registerPage {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .registerPageContent {
+      order: 2;
+      margin-left: 100px;
+    }
+
+    .registerInfoBox {
+      order: 1;
+      margin-right: 50px;
+    }
+  }
+}

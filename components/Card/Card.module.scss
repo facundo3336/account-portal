@@ -25,5 +25,37 @@
 @media screen and (min-width: 768px) {
   .card {
     padding: 65px;
+
+    &.sm {
+      width: 200px;
+    }
+
+    &.md {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    &.sm {
+      width: 300px;
+    }
+
+    &.md {
+      width: 500px;
+    }
+
+    &.lg {
+      width: 900px;
+    }
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .card {
+    &.lg {
+      width: 900px;
+    }
   }
 }

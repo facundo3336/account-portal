@@ -7,8 +7,10 @@ import { Checkbox } from "../../components/Checkbox/CheckBox";
 import { Button, ButtonColor } from "../../components/Button/Button";
 import Link from "next/link";
 import { User } from "../../types";
+import { login } from "../../utils/auth";
 
 const Login: NextPage = () => {
+  const [loading, setLoading] = useState(false);
   const [data, setData] = useState<User>({
     email: "",
     password: "",
@@ -31,10 +33,12 @@ const Login: NextPage = () => {
   };
 
   const onClickLogUser = async () => {
+    setLoading(true);
     const loginResponse = await login(data);
 
     if (loginResponse.success === false) {
       setError(loginResponse.error);
+      setLoading(false);
     }
   };
 
@@ -61,7 +65,11 @@ const Login: NextPage = () => {
               <div className={styles.checkBoxLoginContainer}>
                 <Checkbox label="Recordarme" />
               </div>
-              <Button color={ButtonColor.Primary} onClick={onClickLogUser}>
+              <Button
+                disable={loading}
+                color={ButtonColor.Primary}
+                onClick={onClickLogUser}
+              >
                 Continuar
               </Button>
               {error !== undefined && (
@@ -72,52 +80,12 @@ const Login: NextPage = () => {
         </Card>
         <div className={styles.accountAskContainer}>
           <span className={styles.accountAsk}>
-            No tienes una cuenta? <Link href="/">Crea una</Link>
+            No tienes una cuenta? <Link href="/register">Crea una</Link>
           </span>
         </div>
       </div>
     </div>
   );
-};
-
-export const getToken = async (data: User) => {
-  const tokenResponse = await fetch(`http://localhost:3000/auth/login`, {
-    method: "POST",
-    body: JSON.stringify({
-      username: data.email,
-      password: data.password,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  });
-
-  const tokenData = await tokenResponse.json();
-
-  if (tokenResponse.status === 201) {
-    return tokenData;
-  } else {
-    return undefined;
-  }
-};
-
-const login = async (data: User) => {
-  const token = await getToken(data);
-
-  if (token !== undefined) {
-    localStorage.setItem("access_token", token);
-
-    return {
-      success: true,
-      error: undefined,
-    };
-  }
-
-  return {
-    success: false,
-    error: "Ocurrió un error al realizar la autenticación",
-  };
 };
 
 export default Login;
