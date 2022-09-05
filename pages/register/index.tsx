@@ -8,7 +8,7 @@ import Link from "next/link";
 import { User } from "../../types";
 import { login } from "../../utils/auth";
 import Router from "next/router";
-import { createUser, getUser } from "../../api/auth";
+import { createUser } from "../../api/auth";
 import { UserContext } from "../../context/user-context";
 
 const Login: NextPage = () => {

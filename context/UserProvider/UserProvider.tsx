@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getUser } from "../../api/auth";
+import { getUser } from "../../api/users";
 import { User } from "../../types";
 import { UserContext } from "../user-context";
 
@@ -38,7 +38,6 @@ export const UserProvider = ({ children }: Props) => {
     <UserContext.Provider
       value={{
         user,
-        setUser,
         setAccessToken,
       }}
     >
