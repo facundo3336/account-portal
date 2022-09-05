@@ -18,17 +18,10 @@ const Login: NextPage = () => {
 
   const [error, setError] = useState<string | undefined>();
 
-  const onChangePassword = (value: string) => {
+  const onChangeData = (value: string, name: string) => {
     setData({
       ...data,
-      password: value,
-    });
-  };
-
-  const onChangeEmail = (value: string) => {
-    setData({
-      ...data,
-      email: value,
+      [name]: value,
     });
   };
 
@@ -53,20 +46,20 @@ const Login: NextPage = () => {
                 type="email"
                 label="Email"
                 value={data.email}
-                onChange={onChangeEmail}
+                onChange={(value) => onChangeData(value, "email")}
               />
               <Input
                 type="password"
                 label="Contraseña"
                 value={data.password}
-                onChange={onChangePassword}
+                onChange={(value) => onChangeData(value, "password")}
                 link={{ label: "Olvidaste tu contraseña?", url: "" }}
               />
               <div className={styles.checkBoxLoginContainer}>
                 <Checkbox label="Recordarme" />
               </div>
               <Button
-                disable={loading}
+                disabled={loading}
                 color={ButtonColor.Primary}
                 onClick={onClickLogUser}
               >

@@ -8,6 +8,7 @@ import Link from "next/link";
 import { User } from "../../types";
 import { login } from "../../utils/auth";
 import Router from "next/router";
+import { createUser } from "../../api/auth";
 
 const Login: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -19,24 +20,10 @@ const Login: NextPage = () => {
 
   const [error, setError] = useState<string | undefined>();
 
-  const onChangePassword = (value: string) => {
+  const onChangeData = (value: string, name: string) => {
     setData({
       ...data,
-      password: value,
-    });
-  };
-
-  const onChangeEmail = (value: string) => {
-    setData({
-      ...data,
-      email: value,
-    });
-  };
-
-  const onChangeUsername = (value: string) => {
-    setData({
-      ...data,
-      username: value,
+      [name]: value,
     });
   };
 
@@ -54,6 +41,10 @@ const Login: NextPage = () => {
 
     if (loginResponse.success === true) {
       Router.push("/");
+    } else {
+      setError(loginResponse.error);
+      setLoading(false);
+      return;
     }
   };
 
@@ -100,23 +91,23 @@ const Login: NextPage = () => {
                 type="email"
                 label="Email"
                 value={data.email}
-                onChange={onChangeEmail}
+                onChange={(value) => onChangeData(value, "email")}
               />
               <Input
                 type="text"
                 label="Full Name"
                 value={data.username as string}
-                onChange={onChangeUsername}
+                onChange={(value) => onChangeData(value, "username")}
               />
               <Input
                 type="password"
                 label="Contraseña"
                 value={data.password}
-                onChange={onChangePassword}
+                onChange={(value) => onChangeData(value, "password")}
               />
 
               <Button
-                disable={loading}
+                disabled={loading}
                 color={ButtonColor.Primary}
                 onClick={onClickCreateUser}
               >
@@ -137,33 +128,6 @@ const Login: NextPage = () => {
       </div>
     </div>
   );
-};
-
-export const createUser = async (data: User) => {
-  const createUserResponse = await fetch(`http://localhost:3000/users`, {
-    method: "POST",
-    body: JSON.stringify({
-      name: data.username,
-      email: data.email,
-      password: data.password,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  });
-
-  if (createUserResponse.status === 201) {
-    return {
-      success: true,
-      error: undefined,
-    };
-  } else {
-    return {
-      success: false,
-      error: "Ocurrió un error al crear el usuario",
-    };
-  }
 };
 
 export default Login;
