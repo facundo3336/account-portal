@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Card } from "../../components/Card/Card";
 import { NextPage } from "next";
 import { Input } from "../../components/Input/Input";
@@ -9,6 +9,7 @@ import { User } from "../../types";
 import { login } from "../../utils/auth";
 import Router from "next/router";
 import { createUser } from "../../api/auth";
+import { UserContext } from "../../context/user-context";
 
 const Login: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -17,6 +18,8 @@ const Login: NextPage = () => {
     username: "",
     password: "",
   });
+
+  const { setUser } = useContext(UserContext);
 
   const [error, setError] = useState<string | undefined>();
 
@@ -40,6 +43,7 @@ const Login: NextPage = () => {
     const loginResponse = await login(data);
 
     if (loginResponse.success === true) {
+      setUser(data);
       Router.push("/");
     } else {
       setError(loginResponse.error);
