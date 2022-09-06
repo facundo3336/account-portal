@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Card } from "../../components/Card/Card";
 import { NextPage } from "next";
 import { Input } from "../../components/Input/Input";
@@ -8,6 +8,7 @@ import { Button, ButtonColor } from "../../components/Button/Button";
 import Link from "next/link";
 import { User } from "../../types";
 import { login } from "../../utils/auth";
+import { UserContext } from "../../context/user-context";
 
 const Login: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -15,6 +16,7 @@ const Login: NextPage = () => {
     email: "",
     password: "",
   });
+  const { setAccessToken } = useContext(UserContext);
 
   const [error, setError] = useState<string | undefined>();
 
@@ -28,6 +30,10 @@ const Login: NextPage = () => {
   const onClickLogUser = async () => {
     setLoading(true);
     const loginResponse = await login(data);
+
+    if (loginResponse.success === true) {
+      setAccessToken(loginResponse.token);
+    }
 
     if (loginResponse.success === false) {
       setError(loginResponse.error);
