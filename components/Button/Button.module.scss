@@ -24,6 +24,27 @@
     }
   }
 
+  &.default {
+    color: map-get($colors, "primary");
+    border: none;
+    background-color: white;
+
+    &:hover {
+      color: map-get($colors, "primary-dark");
+    }
+  }
+
+  &.primary-white {
+    background-color: white;
+    color: map-get($colors, "primary");
+    border-color: map-get($colors, "primary");
+
+    &:hover {
+      background-color: map-get($colors, "primary");
+      color: white;
+    }
+  }
+
   &.secondary {
     background-color: map-get($colors, "secondary");
     color: white;
@@ -35,48 +56,72 @@
     }
   }
 
-  &.primary-light {
-    background-color: map-get($colors, "primary-light");
+  &.primary-400 {
+    background-color: map-get($colors, "primary-400");
     color: black;
     border-color: black;
 
     &:hover {
       background-color: black;
-      color: map-get($colors, "primary-light");
+      color: map-get($colors, "primary-400");
     }
   }
 
-  &.primary-dark {
-    background-color: map-get($colors, "primary-dark");
-    color: white;
-    border-color: map-get($colors, "primary-dark");
-
-    &:hover {
-      background-color: white;
-      color: map-get($colors, "primary-dark");
-    }
-  }
-
-  &.secondary-light {
+  &.primary-100 {
+    background-color: map-get($colors, "primary-100");
     color: black;
-    background-color: map-get($colors, "secondary-light");
     border-color: black;
 
     &:hover {
-      color: map-get($colors, "secondary-light");
+      background-color: black;
+      color: map-get($colors, "primary-100");
+    }
+  }
+
+  &.primary-900 {
+    background-color: map-get($colors, "primary-900");
+    color: white;
+    border-color: map-get($colors, "primary-900");
+
+    &:hover {
+      background-color: white;
+      color: map-get($colors, "primary-900");
+    }
+  }
+
+  &.secondary-200 {
+    color: black;
+    background-color: map-get($colors, "secondary-200");
+    border-color: black;
+
+    &:hover {
+      color: map-get($colors, "secondary-200");
 
       background-color: black;
     }
   }
 
-  &.secondary-dark {
-    background-color: map-get($colors, "secondary-dark");
+  &.secondary-700 {
+    background-color: map-get($colors, "secondary-700");
     color: white;
-    border-color: map-get($colors, "secondary-dark");
+    border-color: map-get($colors, "secondary-700");
 
     &:hover {
       background-color: white;
-      color: map-get($colors, "secondary-dark");
+      color: map-get($colors, "secondary-700");
+    }
+  }
+
+  &:disabled {
+    background-color: map-get($colors, "primary-100");
+    border-color: map-get($colors, "primary-100");
+    color: white;
+    cursor: default;
+
+    &:hover {
+      background-color: map-get($colors, "primary-100");
+      border-color: map-get($colors, "primary-100");
+      color: white;
     }
   }
 }

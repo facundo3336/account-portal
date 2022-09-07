@@ -35,10 +35,10 @@
 
     a {
       margin-left: 5px;
-      color: map-get($colors, "primary-light");
+      color: map-get($colors, "primary-50");
 
       &:hover {
-        color: map-get($colors, "secondary-dark");
+        color: map-get($colors, "secondary-700");
       }
     }
   }

@@ -20,11 +20,11 @@
   }
 
   a {
-    color: map-get($colors, "primary-light");
+    color: map-get($colors, "primary-50");
     text-align: right;
 
     &:hover {
-      color: map-get($colors, "secondary-dark");
+      color: map-get($colors, "secondary-700");
     }
   }
 }
