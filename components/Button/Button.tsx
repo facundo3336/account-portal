@@ -2,11 +2,14 @@ import styles from "./Button.module.scss";
 
 export enum ButtonColor {
   Primary = "primary",
-  PrimaryLight = "primary-light",
-  PrimaryDark = "primary-dark",
+  Primary400 = "primary-400",
+  PrimaryWhite = "primary-white",
+  Primary900 = "primary-900",
+  Primary50 = "primary-50",
   Secondary = "secondary",
-  SecondaryLight = "secondary-light",
-  SecondaryDark = "secondary-dark",
+  Secondary200 = "secondary-200",
+  Secondary700 = "secondary-700",
+  Default = "default",
 }
 
 interface Props {

@@ -1,0 +1,71 @@
+@import "../../styles/colors.scss";
+
+.accountSetupStep1Page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: map-get($colors, $key: "primary-900");
+}
+
+.accountSetupHeadContainer {
+  text-align: center;
+  padding-bottom: 30px;
+
+  h1 {
+    margin: 8px;
+    line-height: 1;
+    font-size: 1.7rem;
+  }
+  p {
+    margin-top: 0;
+    color: map-get($colors, "grey");
+    font-weight: 500;
+  }
+
+  .stepLetter {
+    font-size: 0.9rem;
+  }
+}
+
+.accountSetupSelectContainer {
+  margin-bottom: 30px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.accountSetupButtonsContainer {
+  padding-top: 30px;
+  button {
+    margin-bottom: 10px;
+
+    &:first-child {
+      order: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .accountSetupButtonsContainer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      max-width: 140px;
+      margin: 0 15px 0 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .accountSetupHeadContainer {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
