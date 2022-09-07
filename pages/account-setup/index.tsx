@@ -27,7 +27,7 @@ const AccountSetup: NextPage = () => {
   };
 
   const onClickRedirect = () => {
-    Router.push("/");
+    Router.push("/account-setup/adress");
   };
 
   const onChangeSetValue = (value: string, name: string) => {

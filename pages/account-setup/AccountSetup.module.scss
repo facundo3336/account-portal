@@ -20,8 +20,13 @@
   }
   p {
     margin-top: 0;
+    margin-bottom: 0;
     color: map-get($colors, "grey");
     font-weight: 500;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 
   .stepLetter {
@@ -49,6 +54,73 @@
   }
 }
 
+.step2Container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 100vh;
+  background-color: map-get($colors, $key: "primary-900");
+}
+
+.step2CardContainer {
+  margin: 0 auto 40px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accountSetupDobleInput {
+  gap: 10px;
+}
+
+.accountSetupInputContainer {
+  gap: 10px;
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+
+  label {
+    font-size: 0.85rem;
+  }
+
+  &:last-child {
+    flex-direction: column;
+
+    input {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.step2ButtonsContainer {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.step2Button {
+  &:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+.buttonArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step2Terms {
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+  font-size: 0.85rem;
+  max-width: 450px;
+
+  a {
+    color: map-get($colors, $key: "secondary-700");
+  }
+}
+
 @media screen and (min-width: 768px) {
   .accountSetupButtonsContainer {
     margin-top: 40px;
@@ -60,6 +132,20 @@
       margin: 0 15px 0 0;
     }
   }
+
+  .step2Checkbox {
+    display: flex;
+    justify-content: left;
+  }
+
+  .step2ButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .step2Button:first-child {
+      order: 2;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -67,5 +153,14 @@
     h1 {
       font-size: 2rem;
     }
+  }
+
+  .step2Terms {
+    max-width: 600px;
+    line-height: 1.2rem;
+  }
+
+  .accountSetupInputContainer:last-child {
+    margin-bottom: 0;
   }
 }
