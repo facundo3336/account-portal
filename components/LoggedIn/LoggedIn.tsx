@@ -14,9 +14,7 @@ export const LoggedIn = ({ children }: Props) => {
     const decoded = jwt_decode<{ exp: number }>(token);
 
     const tokenExpiresAt = new Date(decoded.exp * 1000);
-    console.log(tokenExpiresAt);
     const now = new Date();
-    console.log(now);
 
     if (tokenExpiresAt > now) {
       setLoggedIn(true);
