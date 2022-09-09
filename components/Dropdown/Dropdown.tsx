@@ -4,10 +4,9 @@ import styles from "./Dropdown.module.scss";
 interface Props {
   children: React.ReactNode;
   title: string;
-  textSize: "sm" | "md" | "lg";
 }
 
-export const Dropdown = ({ children, title, textSize }: Props) => {
+export const Dropdown = ({ children, title }: Props) => {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -33,7 +32,7 @@ export const Dropdown = ({ children, title, textSize }: Props) => {
     (open ? styles["dropdownActive"] : "");
 
   return (
-    <div className={styles.dropdown + " " + styles[textSize]} ref={ref}>
+    <div className={styles.dropdown} ref={ref}>
       <div onClick={onClickActiveArrow} className={dropdownTitleStyles}>
         <span className={styles.dropdownTitle}>{title}</span>
         <div className={styles.dropdownArrow}>
