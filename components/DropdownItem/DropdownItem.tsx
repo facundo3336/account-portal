@@ -1,19 +1,18 @@
 import styles from "./DropdownItem.module.scss";
 
 interface Props {
-  endOfSection: boolean;
+  type?: "separator";
   children?: React.ReactNode;
   icon?: string;
 }
 
-export const DropdownItem = ({ endOfSection, children, icon }: Props) => {
-  const dropdownItemClasses =
-    styles["dropdownItem"] +
-    " " +
-    (endOfSection ? styles["endOfSectionLine"] : "");
+export const DropdownItem = ({ type, children, icon }: Props) => {
+  if (type === "separator") {
+    return <div className={styles.separator}></div>;
+  }
 
   return (
-    <div className={dropdownItemClasses}>
+    <div className={styles.dropdownItem}>
       {icon !== undefined && (
         <span className={"material-icons-outlined " + styles.dropdownIcon}>
           {icon}

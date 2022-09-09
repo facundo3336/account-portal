@@ -11,17 +11,17 @@
     background-color: map-get($colors, "lighterGrey");
     cursor: pointer;
   }
+}
 
-  &.endOfSectionLine {
-    margin: 12px 0;
-    padding: 0;
-    height: 1.5px;
+.separator {
+  margin: 12px 0;
+  padding: 0;
+  height: 1.5px;
+  background-color: map-get($colors, "lighterGrey");
+
+  &:hover {
     background-color: map-get($colors, "lighterGrey");
-
-    &:hover {
-      background-color: map-get($colors, "lighterGrey");
-      cursor: default;
-    }
+    cursor: default;
   }
 }
 

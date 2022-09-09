@@ -43,14 +43,10 @@ const AccountSetup: NextPage = () => {
     <LoggedIn>
       <div className={`${styles.accountSetupStep1Page} sideSpacing`}>
         <Dropdown title="Test">
-          <DropdownItem icon="account_circle" endOfSection={false}>
-            Holas como tas
-          </DropdownItem>
-          <DropdownItem endOfSection={true}></DropdownItem>
-          <DropdownItem endOfSection={false}>
-            Holas como te va pariente
-          </DropdownItem>
-          <DropdownItem endOfSection={false}>Holas sr</DropdownItem>
+          <DropdownItem icon="account_circle">Holas como tas</DropdownItem>
+          <DropdownItem type="separator" />
+          <DropdownItem>Holas como te va pariente</DropdownItem>
+          <DropdownItem>Holas sr</DropdownItem>
         </Dropdown>
         <Card size="lg">
           <div className={styles.accountSetupHeadContainer}>
