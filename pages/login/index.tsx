@@ -16,6 +16,8 @@ const Login: NextPage = () => {
     email: "",
     password: "",
   });
+
+  const [remember, setRemember] = useState(false);
   const { setAccessToken } = useContext(UserContext);
 
   const [error, setError] = useState<string | undefined>();
@@ -25,6 +27,10 @@ const Login: NextPage = () => {
       ...data,
       [name]: value,
     });
+  };
+
+  const onChangeRemember = (value: boolean) => {
+    setRemember(value);
   };
 
   const onClickLogUser = async () => {
@@ -62,7 +68,13 @@ const Login: NextPage = () => {
                 link={{ label: "Olvidaste tu contraseña?", url: "" }}
               />
               <div className={styles.checkBoxLoginContainer}>
-                <Checkbox label="Recordarme" />
+                <Checkbox
+                  value={remember}
+                  onChange={(value) => {
+                    onChangeRemember(value);
+                  }}
+                  label="Recordarme"
+                />
               </div>
               <Button
                 disabled={loading}
