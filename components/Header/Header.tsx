@@ -6,11 +6,9 @@ interface Props {
 }
 
 export const Header = ({ children, border }: Props) => {
-  const borderClass = border ? "greyBorder" : "";
+  const borderClass = border ? styles["greyBorder"] : "";
 
   return (
-    <header className={styles.header + " " + styles[borderClass]}>
-      {children}
-    </header>
+    <header className={styles.header + " " + borderClass}>{children}</header>
   );
 };
