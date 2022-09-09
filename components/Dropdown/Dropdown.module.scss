@@ -1,0 +1,70 @@
+@import "../../styles/colors.scss";
+.dropdown {
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+
+  &.text-sm {
+    font-size: 0.9rem;
+  }
+
+  &.text-md {
+    font-size: 1rem;
+  }
+
+  &.text-lg {
+    font-size: 1.1rem;
+  }
+}
+
+.dropdownTitleContainer {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 15px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dropdownTitle {
+  margin-right: 10px;
+}
+
+.dropdownArrow {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+.dropdownActive {
+  background-color: map-get($colors, "lighterGrey");
+
+  .dropdownArrow {
+    background-color: map-get($colors, "lighterGrey");
+  }
+}
+
+.dropdownContent {
+  margin-top: 5px;
+  background-color: white;
+  position: absolute;
+  width: auto;
+  display: block;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 1px 1px 13px 3px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 1px 1px 13px 3px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 1px 1px 13px 3px rgba(0, 0, 0, 0.09);
+}

@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import Link from "next/link";
 import Router from "next/router";
 import { useState } from "react";
 import { Button, ButtonColor } from "../../components/Button/Button";
