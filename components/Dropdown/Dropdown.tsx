@@ -1,26 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Dropdown.module.scss";
 
-export enum TextSize {
-  sm = "text-sm",
-  md = "text-md",
-  lg = "text-lg",
-}
-
 interface Props {
   children: React.ReactNode;
   title: string;
-  textSize: TextSize;
+  textSize: "sm" | "md" | "lg";
 }
 
 export const Dropdown = ({ children, title, textSize }: Props) => {
-  const [dropdown, setDropdownActive] = useState(false);
+  const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onDocumentClick = (e: MouseEvent) => {
       if (!ref.current?.contains(e.target as Element)) {
-        setDropdownActive(false);
+        setOpen(false);
       }
     };
 
@@ -30,13 +24,13 @@ export const Dropdown = ({ children, title, textSize }: Props) => {
   }, []);
 
   const onClickActiveArrow = () => {
-    setDropdownActive(!dropdown);
+    setOpen(!open);
   };
 
   const dropdownTitleStyles =
     styles.dropdownTitleContainer +
     " " +
-    (dropdown && styles["dropdownActive"]);
+    (open ? styles["dropdownActive"] : "");
 
   return (
     <div className={styles.dropdown + " " + styles[textSize]} ref={ref}>
@@ -46,7 +40,7 @@ export const Dropdown = ({ children, title, textSize }: Props) => {
           <span className="material-icons-outlined">expand_more</span>
         </div>
       </div>
-      {dropdown && <div className={styles.dropdownContent}>{children}</div>}
+      {open && <div className={styles.dropdownContent}>{children}</div>}
     </div>
   );
 };

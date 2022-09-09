@@ -1,10 +1,8 @@
 import { NextPage } from "next";
-import Link from "next/link";
 import Router from "next/router";
 import { useState } from "react";
 import { Button, ButtonColor } from "../../components/Button/Button";
 import { Card } from "../../components/Card/Card";
-import { Dropdown, TextSize } from "../../components/Dropdown/Dropdown";
 import { LoggedIn } from "../../components/LoggedIn/LoggedIn";
 import { Select } from "../../components/Select/Select";
 import styles from "./AccountSetup.module.scss";
