@@ -10,7 +10,6 @@ interface Props {
   };
   value: string;
   onChange: (value: string) => void;
-  extraClass?: string;
 }
 
 export const Input = ({ type, label, link, value, onChange }: Props) => {
