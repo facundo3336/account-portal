@@ -1,0 +1,52 @@
+@import "../../styles/colors.scss";
+
+.bussinessCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: -1px 1px 5px 2px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: -1px 1px 5px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: -1px 1px 5px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  padding: 20px;
+
+  &:hover {
+    cursor: pointer;
+
+    h4 {
+      color: map-get($colors, "primary");
+    }
+  }
+
+  p {
+    margin: 5px 0 0 0;
+    font-size: 0.85rem;
+    color: map-get($colors, "grey");
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  .bussinesCardArrow {
+    display: block;
+    width: 10%;
+  }
+
+  .buissinessCardIcon {
+    background-color: map-get($colors, "lighterGrey");
+    border-radius: 50%;
+    padding: 23px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .bussinessCardTitle {
+    width: 80%;
+  }
+}
