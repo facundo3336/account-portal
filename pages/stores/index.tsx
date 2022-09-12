@@ -28,11 +28,7 @@ const Stores: NextPage = () => {
           </Dropdown>
         </Header>
         <h1>Tiendas</h1>
-        <div className={styles.storeCardsContainer}>
-          <BussinessCard url="/" name="Colitis" />
-          <BussinessCard url="/" name="Colitis" />
-          <BussinessCard url="/" name="Colitis" />
-        </div>
+        <div className={styles.storeCardsContainer}></div>
       </Card>
     </div>
   );
