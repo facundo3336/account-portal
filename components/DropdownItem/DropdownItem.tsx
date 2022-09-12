@@ -5,24 +5,22 @@ interface Props {
   type?: "separator";
   children?: React.ReactNode;
   icon?: string;
-  url: string;
+  onClick: () => void;
 }
 
-export const DropdownItem = ({ type, children, icon, url }: Props) => {
+export const DropdownItem = ({ type, children, icon, onClick }: Props) => {
   if (type === "separator") {
     return <div className={styles.separator}></div>;
   }
 
   return (
-    <Link href={url}>
-      <div className={styles.dropdownItem}>
-        {icon !== undefined && (
-          <span className={"material-icons-outlined " + styles.dropdownIcon}>
-            {icon}
-          </span>
-        )}
-        {children}
-      </div>
-    </Link>
+    <div onClick={onClick} className={styles.dropdownItem}>
+      {icon !== undefined && (
+        <span className={"material-icons-outlined " + styles.dropdownIcon}>
+          {icon}
+        </span>
+      )}
+      {children}
+    </div>
   );
 };
