@@ -1,0 +1,43 @@
+@import "../../styles/colors.scss";
+
+.createStorePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: map-get($colors, "primary-900");
+
+  header {
+    display: flex;
+    justify-content: right;
+    padding-top: 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: map-get($colors, "grey");
+    padding-bottom: 40px;
+  }
+}
+
+.createStoreTitleContainer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  button {
+    width: 40px;
+    padding-left: 0;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: 1.7rem;
+    margin: 0;
+  }
+}
+
+.createStoreButton {
+  width: 150px;
+  margin-top: 50px;
+}

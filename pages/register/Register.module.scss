@@ -35,7 +35,7 @@
 
     a {
       margin-left: 5px;
-      color: map-get($colors, "primary-50");
+      color: map-get($colors, "primary-400");
 
       &:hover {
         color: map-get($colors, "secondary-700");

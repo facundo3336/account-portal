@@ -1,0 +1,11 @@
+@import "../../styles/colors.scss";
+
+.navigation {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  padding: 13px;
+  gap: 5px;
+  border-top: 1.5px solid map-get($colors, "lighterGrey");
+  border-bottom: 1.5px solid map-get($colors, "lighterGrey");
+}

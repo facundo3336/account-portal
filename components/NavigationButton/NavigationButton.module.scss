@@ -1,0 +1,25 @@
+@import "../../styles/colors.scss";
+
+.NavButton {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 4px 20px;
+  font-size: 0.9rem;
+
+  &:hover {
+    background-color: map-get($colors, "lighterGrey");
+    cursor: pointer;
+  }
+
+  &.buttonActive {
+    color: white;
+    background-color: map-get($colors, "primary");
+
+    &:hover {
+      background-color: map-get($colors, "primary");
+    }
+  }
+}

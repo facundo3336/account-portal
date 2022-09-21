@@ -1,6 +1,10 @@
 .header {
   background-color: white;
   padding: 35px 20px;
+
+  &.transparent {
+    background-color: transparent;
+  }
 }
 
 .greyBorder {
