@@ -6,7 +6,6 @@ import { DropdownItem } from "../../components/DropdownItem/DropdownItem";
 import { useContext } from "react";
 import { UserContext } from "../../context/user-context";
 import { Card } from "../../components/Card/Card";
-import { BussinessCard } from "../../components/Bussiness-card/BussinessCard";
 
 const Stores: NextPage = () => {
   const { user } = useContext(UserContext);
