@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import { getToken } from "../api/auth";
-import { UserContext } from "../context/user-context";
 import { User } from "../types";
 
 export const login = async (data: User) => {
