@@ -10,9 +10,17 @@ interface Props {
   };
   value: string;
   onChange: (value: string) => void;
+  placerholder?: string;
 }
 
-export const Input = ({ type, label, link, value, onChange }: Props) => {
+export const Input = ({
+  type,
+  label,
+  link,
+  value,
+  onChange,
+  placerholder,
+}: Props) => {
   return (
     <div className={styles.inputContainer}>
       <div className={styles.labelContainer}>
@@ -20,6 +28,7 @@ export const Input = ({ type, label, link, value, onChange }: Props) => {
         {link && <Link href={link.url}>{link.label}</Link>}
       </div>
       <input
+        placeholder={placerholder}
         onChange={(e) => onChange(e.target.value)}
         value={value}
         className={styles.input}
