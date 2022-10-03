@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   };
 
   const onClickRedirect = () => {
-    Router.push("/account-setup");
+    Router.push("/shop-questionnaire");
   };
 
   return (
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <div className={styles.indexPageHeaderContainer}>
         <div className={styles.mainPageHeaderWidth + " sideSpacing"}>
           <Header transparent={true}>
-            <h1 className={styles.indexPageTitle}>Eshopuy</h1>
+            <div className={styles.headerLogo}></div>
           </Header>
           <div>
             <h2>Vende online con Eshopuy</h2>

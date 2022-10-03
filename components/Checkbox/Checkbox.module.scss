@@ -1,20 +1,29 @@
 @import "../../styles/colors.scss";
 
 .checkBoxContainer {
+  display: flex;
+  justify-content: center;
   label {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
-.checkBoxInput {
-  margin-right: 10px;
-  width: 15px;
-  height: 15px;
+.inputContainer {
+  width: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .checkBoxInput {
+  width: 15px;
+  height: 15px;
+  display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
@@ -24,6 +33,10 @@
   transition-duration: 0.3s;
   background-color: white;
   border: 1px solid black;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .checkBoxInput:checked {
@@ -31,4 +44,29 @@
   background-image: url("../../public/tic.svg");
   background-position: center center;
   background-size: contain;
+}
+
+.checkBoxExtraText {
+  color: map-get($colors, "lightGrey");
+  font-size: 0.9rem;
+  margin-bottom: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.checkBoxExtraTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+
+  span {
+    font-weight: 500;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
