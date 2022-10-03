@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+.questionnaireOption {
+  border: 1px solid map-get($colors, "lighterGrey");
+  display: flex;
+  padding: 20px 10px;
+  border-radius: 5px;
+
+  &:hover {
+    border-color: map-get($colors, "lightGrey");
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .questionnarieOption {
+    padding: 0;
+  }
+}

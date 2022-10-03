@@ -43,6 +43,23 @@
   }
 }
 
+.headerLogo {
+  padding: 25px 100px;
+  width: 130px;
+  height: 40px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../public/logo.png");
+  background-color: white;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: 0 auto;
+  color: white;
+}
+
 .indexHeaderImg {
   height: 300px;
   width: 300px;

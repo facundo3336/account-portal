@@ -7,3 +7,12 @@ export interface User {
 export interface Token {
   access_token: string;
 }
+
+export interface QuestionnaireData {
+  question: string;
+  extraText: string;
+  options: {
+    title: string;
+    extraText?: string;
+  }[];
+}

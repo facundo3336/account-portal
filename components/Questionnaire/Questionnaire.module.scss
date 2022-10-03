@@ -1,0 +1,39 @@
+@import "../../styles/colors.scss";
+
+.questionnaireContainer {
+  h1 {
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  .questionnaireExtraText {
+    color: map-get($colors, "grey");
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+}
+
+.questionnarieOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .questionnaireContainer {
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  .questionnarieOptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .questionnaireContainer {
+    height: 500px;
+  }
+}

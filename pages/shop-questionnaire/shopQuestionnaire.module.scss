@@ -1,0 +1,90 @@
+@import "../../styles/colors.scss";
+
+.shopQuestionnaireContainer {
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.headerLogo {
+  background-image: url("../../public/logo.png");
+  width: 100px;
+  height: 30px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.shopQuestionnaireLogo {
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+
+.loadingBarContainer {
+  padding-bottom: 30px;
+}
+
+.nextButtonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrowButtonContainer {
+  max-width: 200px;
+
+  button {
+    padding-left: 0;
+  }
+}
+
+.arrowButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .shopQuestionnaireLogo {
+    padding-top: 0;
+  }
+
+  .nextButtonContainer {
+    button:first-child {
+      padding-right: 40px;
+    }
+  }
+
+  .headerLogo {
+    width: 150px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shopQuestionnaireContainer {
+    width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+  }
+
+  .shopQuestionnaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($colors, "primary");
+    min-height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .shopQuestionnaireContainer {
+    width: 1100px;
+  }
+}
