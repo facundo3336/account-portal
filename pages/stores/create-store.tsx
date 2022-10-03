@@ -28,15 +28,15 @@ const CreateStore: NextPage = () => {
     <div className={styles.createStorePage + " sideSpacing"}>
       <Card size="lg">
         <div>
-          <Header>
+          <Header transparent={true}>
             <Dropdown title={user?.username as string}>
-              <DropdownItem url="" icon="account_circle">
+              <DropdownItem onClick={() => {}} icon="account_circle">
                 <span>Editar cuenta</span>
               </DropdownItem>
-              <DropdownItem url="" icon="switch_account">
+              <DropdownItem onClick={() => {}} icon="switch_account">
                 <span>Cambiar cuenta</span>
               </DropdownItem>
-              <DropdownItem url="" icon="logout">
+              <DropdownItem onClick={() => {}} icon="logout">
                 <span>Salir</span>
               </DropdownItem>
             </Dropdown>
