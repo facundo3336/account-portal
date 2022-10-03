@@ -24,7 +24,9 @@ export const Questionnaire = ({ questionnarieData }: Props) => {
   return (
     <div className={styles.questionnaireContainer}>
       <h1>{questionnaire.question}</h1>
-      <p className={styles.questionnaireExtraText}>{questionnaire.extraText}</p>
+      <p className={styles.questionnaireExtraText}>
+        {questionnaire.description}
+      </p>
       <div className={styles.questionnarieOptions}>
         {questionnaire.options.map((option) => {
           return (
@@ -32,7 +34,7 @@ export const Questionnaire = ({ questionnarieData }: Props) => {
               selectedIndex={indexSelected}
               key={questionnaire.options.indexOf(option) + 1}
               index={questionnaire.options.indexOf(option) + 1}
-              option={{ title: option.title, extraText: option.extraText }}
+              option={{ title: option.title, description: option.description }}
               onClickSelected={onClickSelected}
             />
           );

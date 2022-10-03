@@ -4,10 +4,10 @@ interface Props {
   label: string;
   value: boolean;
   onChange: (value: boolean) => void;
-  extraText?: string;
+  description?: string;
 }
 
-export const Checkbox = ({ label, value, onChange, extraText }: Props) => {
+export const Checkbox = ({ label, value, onChange, description }: Props) => {
   return (
     <div className={styles.checkBoxContainer}>
       <label>
@@ -21,7 +21,9 @@ export const Checkbox = ({ label, value, onChange, extraText }: Props) => {
         </div>
         <div className={styles.checkBoxExtraTextContainer}>
           <span>{label}</span>
-          {extraText && <p className={styles.checkBoxExtraText}>{extraText}</p>}
+          {description && (
+            <p className={styles.checkBoxExtraText}>{description}</p>
+          )}
         </div>
       </label>
     </div>

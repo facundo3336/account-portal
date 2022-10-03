@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./shopQuestionnaire.module.scss";
 import { QUESTIONNARIE_DATA } from "../../questionnarieData";
 import { Questionnaire } from "../../components/Questionnaire/Questionnaire";
@@ -7,13 +7,16 @@ import { Header } from "../../components/Header/Header";
 import { Button, ButtonColor } from "../../components/Button/Button";
 import { LoadingBar } from "../../components/LoadingBar/LoadingBar";
 import Router from "next/router";
+import { perecentageCompleted } from "../../utils/questionnaire";
 
 const ShopQuestionnaire: NextPage = () => {
   const [countInfo, setCountInfo] = useState(0);
-  const [loadingBar, setLoadingBar] = useState(0);
   const [info, setInfo] = useState(QUESTIONNARIE_DATA);
+  const [percentageBar, setPercentageBar] = useState(1);
 
-  const loadingBarPercetnages = [25, 50, 75];
+  useEffect(() => {
+    setPercentageBar(perecentageCompleted(countInfo, info));
+  }, [countInfo]);
 
   const onClickRedirect = () => {
     Router.push("/");
@@ -21,13 +24,11 @@ const ShopQuestionnaire: NextPage = () => {
 
   const onClickNext = () => {
     setCountInfo(countInfo + 1);
-    setLoadingBar(loadingBar + 1);
   };
 
   const onClickBack = () => {
     if (countInfo !== 0) {
       setCountInfo(countInfo - 1);
-      setLoadingBar(loadingBar - 1);
     }
   };
 
@@ -38,7 +39,7 @@ const ShopQuestionnaire: NextPage = () => {
           <div className={styles.headerLogo}></div>
         </div>
         <div className={styles.loadingBarContainer}>
-          <LoadingBar percentage={loadingBarPercetnages[loadingBar]} />
+          <LoadingBar percentage={percentageBar} />
         </div>
         <Questionnaire questionnarieData={info[countInfo]} />
         <div>

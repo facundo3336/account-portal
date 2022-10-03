@@ -10,9 +10,9 @@ export interface Token {
 
 export interface QuestionnaireData {
   question: string;
-  extraText: string;
+  description: string;
   options: {
     title: string;
-    extraText?: string;
+    description?: string;
   }[];
 }

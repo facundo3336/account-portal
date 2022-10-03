@@ -5,7 +5,7 @@ import styles from "./QuestionnaireOption.module.scss";
 interface Props {
   option: {
     title: string;
-    extraText?: string;
+    description?: string;
   };
   onClickSelected: (index: number) => void;
   index: number;
@@ -34,7 +34,7 @@ export const QuestionnaireOption = ({
       onClick={() => onClickSelected(index)}
     >
       <Checkbox
-        extraText={option.extraText}
+        description={option.description}
         label={option.title}
         value={isSelected}
         onChange={() => setIsSelected}

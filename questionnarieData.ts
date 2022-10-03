@@ -1,7 +1,7 @@
 export const QUESTIONNARIE_DATA = [
   {
     question: "¿Cuál de las siguiente opciones te describe mejor?",
-    extraText:
+    description:
       "Te ayudaremos a configurarlo todo de acuerdo con tus necesidades comerciales.",
     options: [
       { title: "Estoy empezando." },
@@ -10,29 +10,29 @@ export const QUESTIONNARIE_DATA = [
   },
   {
     question: "¿Dónde te gustaría vender?",
-    extraText:
+    description:
       "Elige tantas opciones como quieras. Puedes cambiarlas más tarde. Nos aseguraremos de que esté todo configurado para que puedas vender en estos sitios.",
     options: [
       {
         title: "Una tienda online",
-        extraText: "Crea un sitio web totalmente personalizable",
+        description: "Crea un sitio web totalmente personalizable",
       },
       {
         title: "Un sitio web o blog existente",
-        extraText: "Agrega un botón de compras al sitio web",
+        description: "Agrega un botón de compras al sitio web",
       },
       {
         title: "Redes sociales",
-        extraText:
+        description:
           "Llega a los clientes a través de Facebook, Instagram, TikTok y más",
       },
       {
         title: "Mercados online",
-        extraText: "Publica productos en Google, Amazon y más",
+        description: "Publica productos en Google, Amazon y más",
       },
       {
         title: "En persona",
-        extraText:
+        description:
           "Vende en tiendas minoristas, tiendas pop up u otras sucursales físicas",
       },
       {
@@ -42,17 +42,17 @@ export const QUESTIONNARIE_DATA = [
   },
   {
     question: "¿Qué tienes previsto vender?",
-    extraText:
+    description:
       "Elige todas las opciones correspondientes y nos aseguraremos de que esté todo listo para que puedas vender.",
     options: [
       { title: "Productos físicos" },
       {
         title: "Productos digitales",
-        extraText: "Vende música, arte digital o NFT",
+        description: "Vende música, arte digital o NFT",
       },
       {
         title: "Servicios",
-        extraText: "Incluidos los de asesoría, limpieza o consultoría",
+        description: "Incluidos los de asesoría, limpieza o consultoría",
       },
       {
         title: "No lo tengo claro",
