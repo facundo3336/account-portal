@@ -10,6 +10,7 @@ import { User } from "../../types";
 import { login } from "../../utils/auth";
 import { UserContext } from "../../context/user-context";
 import { Navigation } from "../../components/Navigation/Navigation";
+import { Header } from "../../components/Header/Header";
 
 const Login: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -52,6 +53,9 @@ const Login: NextPage = () => {
     <div className={styles.loginPage + " sideSpacing"}>
       <div className={styles.loginPageContent}>
         <Card size="md">
+          <Header logo transparent center={false}>
+            <></>
+          </Header>
           <div>
             <h1>Ingresa a tu cuenta</h1>
             <div className={styles.inputsContainer}>

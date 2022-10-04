@@ -22,8 +22,8 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <div className={styles.indexPageHeaderContainer}>
         <div className={styles.mainPageHeaderWidth + " sideSpacing"}>
-          <Header transparent={true}>
-            <div className={styles.headerLogo}></div>
+          <Header logo={false} center={true} transparent={true}>
+            <div className={styles.headerLogo} />
           </Header>
           <div>
             <h2>Vende online con Eshopuy</h2>

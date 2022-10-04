@@ -10,6 +10,7 @@ import { login } from "../../utils/auth";
 import Router from "next/router";
 import { createUser } from "../../api/auth";
 import { UserContext } from "../../context/user-context";
+import { Header } from "../../components/Header/Header";
 
 const Login: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -88,6 +89,9 @@ const Login: NextPage = () => {
       </div>
       <div className={styles.registerPageContent}>
         <Card size="md">
+          <Header logo transparent center={false}>
+            <></>
+          </Header>
           <div>
             <h1>Crea tu cuenta</h1>
             <div className={styles.inputsContainer}>
