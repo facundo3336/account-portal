@@ -13,7 +13,7 @@ const Stores: NextPage = () => {
   return (
     <div className={styles.storesPage + " sideSpacing"}>
       <Card size="lg">
-        <Header transparent={true}>
+        <Header logo={true} center={false} transparent={true}>
           <Dropdown title={user?.username as string}>
             <DropdownItem onClick={() => {}} icon="account_circle">
               <span>Editar cuenta</span>
