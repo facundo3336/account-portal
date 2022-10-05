@@ -1,0 +1,51 @@
+@import "../../styles/colors.scss";
+
+.itemIconContainer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 5px 0 5px 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-left: 3px solid white;
+
+  span {
+    width: 20px;
+  }
+
+  &[aria-selected="true"] {
+    background-color: map-get($colors, "backgroundLighterGrey");
+    border-color: map-get($colors, "primary");
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    span {
+      color: map-get($colors, "primary");
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: map-get($colors, "backgroundLighterGrey");
+  }
+
+  h5 {
+    margin: 0;
+    line-height: 1;
+    padding-left: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
+.itemOptionsContainer {
+  margin: 0;
+  width: 100%;
+  padding-inline-start: 0;
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}

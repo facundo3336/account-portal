@@ -1,0 +1,63 @@
+.sidebarContainer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  min-width: 100vw;
+  z-index: 10;
+  visibility: hidden;
+}
+
+.sidebarLogo {
+  width: 150px;
+  height: 40px;
+  background-image: url("../../public/logo.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 60px 0px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  z-index: 11;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  padding: 0;
+  width: 280px;
+  top: 0;
+  left: -280px;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  height: 100%;
+}
+
+.isOpenClass {
+  visibility: visible;
+
+  .sidebar {
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebarContainer {
+    padding: 10px;
+    visibility: visible;
+    background-color: white;
+    height: 100%;
+    min-width: 300px;
+    position: unset;
+    transition: 0s;
+  }
+
+  .sidebarLogo {
+    display: none;
+  }
+
+  .sidebar {
+    left: 0;
+    height: 100%;
+    transition: 0s;
+  }
+}
