@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "../../context/user-context";
 import { FloatButton } from "../FloatButton/FloatButton";
 import { Header } from "../Header/Header";
 import { Sidebar } from "../Sidebar/Sidebar";
@@ -6,11 +7,12 @@ import styles from "./Layout.module.scss";
 
 interface Props {
   children: React.ReactNode;
-  user: string;
 }
 
-export const Layout = ({ children, user }: Props) => {
+export const Layout = ({ children }: Props) => {
   const [sidebar, setSidebar] = useState(false);
+
+  const { user } = useContext(UserContext);
 
   const onClickSidebar = () => {
     setSidebar(!sidebar);
@@ -20,7 +22,7 @@ export const Layout = ({ children, user }: Props) => {
     <div>
       <div className="sideSpacing">
         <Header logo={true} transparent={false} center={false}>
-          {user}
+          <span>{user?.username}</span>
         </Header>
       </div>
       <div className={styles.layoutSidebarChildrenContainer}>
