@@ -1,7 +1,7 @@
 import styles from "./Header.module.scss";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   border?: boolean;
   transparent: boolean;
   center: boolean;
@@ -22,15 +22,12 @@ export const Header = ({
 
   return (
     <header
-      className={
-        styles.header +
-        " " +
-        borderClass +
-        " " +
-        transparentClass +
-        " " +
-        centerClass
-      }
+      className={[
+        styles.header,
+        borderClass,
+        transparentClass,
+        centerClass,
+      ].join(" ")}
     >
       {logo && <div className={styles.headerImg}></div>}
       <div>{children}</div>

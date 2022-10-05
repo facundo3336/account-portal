@@ -9,7 +9,6 @@ import Link from "next/link";
 import { User } from "../../types";
 import { login } from "../../utils/auth";
 import { UserContext } from "../../context/user-context";
-import { Navigation } from "../../components/Navigation/Navigation";
 import { Header } from "../../components/Header/Header";
 
 const Login: NextPage = () => {

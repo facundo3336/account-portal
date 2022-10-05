@@ -89,9 +89,7 @@ const Login: NextPage = () => {
       </div>
       <div className={styles.registerPageContent}>
         <Card size="md">
-          <Header logo transparent center={false}>
-            <></>
-          </Header>
+          <Header logo transparent center={false}></Header>
           <div>
             <h1>Crea tu cuenta</h1>
             <div className={styles.inputsContainer}>
