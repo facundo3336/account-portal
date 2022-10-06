@@ -1,13 +1,56 @@
+@import "../../styles/colors.scss";
+
 .layoutChildren {
   margin: 0 auto;
 }
 
+.layoutHeaderContainer {
+  background-color: white;
+  width: 100%;
+  height: 120px;
+  box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.18);
+}
+
+.layoutSidebarChildrenContainer {
+  background-color: map-get($colors, "backgroundLighterGrey");
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 1024px) {
+  .layoutChildren {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+    padding-left: 350px;
+  }
+
+  .layoutHeaderContainer {
+    position: fixed;
+  }
+
+  .layoutHeader {
+    position: fixed;
+    width: 100%;
+  }
+
   .layoutSidebarChildrenContainer {
     display: flex;
+    height: 100%;
+    flex-grow: 1;
   }
 
   .layoutSidebar {
+    margin-top: 124px;
     padding-left: 40px;
+    position: fixed;
+    height: 100%;
   }
 }

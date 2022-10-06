@@ -19,11 +19,13 @@ export const Layout = ({ children }: Props) => {
   };
 
   return (
-    <div>
-      <div className="sideSpacing">
-        <Header logo={true} transparent={false} center={false}>
-          <span>{user?.username}</span>
-        </Header>
+    <div className={styles.layout}>
+      <div className={styles.layoutHeaderContainer}>
+        <div className={styles.layoutHeader + " sideSpacing"}>
+          <Header logo={true} transparent={false} center={false}>
+            <span>{user?.username}</span>
+          </Header>
+        </div>
       </div>
       <div className={styles.layoutSidebarChildrenContainer}>
         <FloatButton onClick={onClickSidebar} />

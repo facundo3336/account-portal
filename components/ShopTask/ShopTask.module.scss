@@ -1,0 +1,103 @@
+@import "../../styles/colors.scss";
+
+.taskButton {
+  width: 220px;
+  font-size: 0.9rem;
+}
+
+.taskContainer {
+  display: flex;
+
+  &[aria-selected="false"] {
+    .taskDescription {
+      display: none;
+    }
+
+    .tickSelected {
+      background-color: map-get($colors, "primary");
+      color: white;
+      border-radius: 100%;
+      padding: 0.2px;
+    }
+
+    .taskDescriptionContainer {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .taskImg {
+      display: none;
+    }
+  }
+
+  &[aria-selected="true"] {
+    .taskDescription {
+      display: block;
+    }
+  }
+}
+
+.taskDescriptionContainer {
+  margin-left: 10px;
+  padding: 15px 0 30px 30px;
+  border-left: 1px solid map-get($colors, "mediumGrey");
+
+  p {
+    font-size: 0.8rem;
+
+    max-width: 500px;
+    margin-right: 50px;
+  }
+}
+
+.taskTitleContainer {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &:hover {
+    cursor: pointer;
+
+    h5 {
+      color: map-get($colors, "grey");
+    }
+  }
+
+  h5 {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.taskImg {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .taskImg {
+    display: block;
+    width: 170px;
+    height: 120px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .taskDescriptionContainer {
+    padding-top: 10px;
+
+    p {
+      max-width: 300px;
+      margin-right: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1330px) {
+  .taskDescriptionContainer {
+    p {
+      max-width: 500px;
+    }
+  }
+}
