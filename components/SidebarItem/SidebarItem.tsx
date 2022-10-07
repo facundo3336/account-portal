@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import { SidebarItemOption } from "../SidebarItemOption/SidebarItemOption";
 import styles from "./SidebarItem.module.scss";
 
@@ -19,9 +19,17 @@ export const SidebarItem = ({ itemName, icon, itemOptions, path }: Props) => {
 
   const isOpen = router.pathname.startsWith(path);
 
+  const onClickRedirect = () => {
+    router.push(path);
+  };
+
   return (
     <div>
-      <div aria-selected={isSelected} className={styles.itemIconContainer}>
+      <div
+        onClick={onClickRedirect}
+        aria-selected={isSelected}
+        className={styles.itemIconContainer}
+      >
         <span className="material-icons-outlined">{icon}</span>
         <h5>{itemName}</h5>
       </div>

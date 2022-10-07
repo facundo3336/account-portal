@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { useState } from "react";
 import { Button, ButtonColor } from "../../../components/Button/Button";
+import { Card } from "../../../components/Card/Card";
 import { InfoCard } from "../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../components/Layout/Layout";
 import { LoadingBar } from "../../../components/LoadingBar/LoadingBar";
@@ -28,68 +29,73 @@ const Home: NextPage = () => {
     <div>
       <Layout>
         <div className={styles.shopHomePage + " " + isOpenClass}>
-          <section className={styles.shopHomeSection + " light-box-shadow"}>
-            <div className={styles.taskSectionTitleContainer}>
-              <div className={styles.arrowContainer}>
-                <span>Guia de configuracion</span>
-                <span
-                  onClick={onClickOpen}
-                  className={styles.tasksArrow + " material-icons-outlined"}
-                >
-                  expand_more
-                </span>
-              </div>
-              <div className={styles.tasksText}>
-                <span>0 de {tasks.length} tareas completadas</span>
-                <div className={styles.loadingBarContainer}>
-                  <LoadingBar
-                    percentage={(Number(taskIndex) * tasks.length) / 100}
-                  />
+          <Card size="info">
+            <section className={styles.shopHomeSection + " light-box-shadow"}>
+              <div className={styles.taskSectionTitleContainer}>
+                <div className={styles.arrowContainer}>
+                  <span>Guia de configuracion</span>
+                  <span
+                    onClick={onClickOpen}
+                    className={styles.tasksArrow + " material-icons-outlined"}
+                  >
+                    expand_more
+                  </span>
+                </div>
+                <div className={styles.tasksText}>
+                  <span>0 de {tasks.length} tareas completadas</span>
+                  <div className={styles.loadingBarContainer}>
+                    <LoadingBar
+                      percentage={(Number(taskIndex) * tasks.length) / 100}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.tasksContainer}>
-              {tasks.map((task, index) => {
-                return (
-                  <ShopTask
-                    completed={task.completed}
-                    onSelected={() => onClickTask(index)}
-                    selected={taskIndex === index}
-                    key={task.name}
-                    task={task}
-                  />
-                );
-              })}
-            </div>
-          </section>
-          <section
-            className={
-              styles.shopHomeSection +
-              " " +
-              styles.homeExpressPay +
-              " light-box-shadow"
-            }
-          >
-            <div className={styles.homeExpressPayContainer}>
-              <h3>
-                Agiliza el proceso de pago con los nuevos botones de pago exprés
-                de Eshopuy Email
-              </h3>
-              <p>
-                Con Shop Pay, permite que tus clientes compren un producto nuevo
-                desde su correo electrónico con unos pocos clics.
-              </p>
-              <div className={styles.tasksTryNowButton}>
-                <Button
-                  textSize="sm"
-                  onClick={() => {}}
-                  color={ButtonColor.Primary900}
-                >
-                  Probar ahora
-                </Button>
+              <div className={styles.tasksContainer}>
+                {tasks.map((task, index) => {
+                  return (
+                    <ShopTask
+                      completed={task.completed}
+                      onSelected={() => onClickTask(index)}
+                      selected={taskIndex === index}
+                      key={task.name}
+                      task={task}
+                    />
+                  );
+                })}
               </div>
-            </div>
-          </section>
+            </section>
+          </Card>
+          <Card size="info">
+            <section
+              className={
+                styles.shopHomeSection +
+                " " +
+                styles.homeExpressPay +
+                " light-box-shadow"
+              }
+            >
+              <div className={styles.homeExpressPayContainer}>
+                <h3>
+                  Agiliza el proceso de pago con los nuevos botones de pago
+                  exprés de Eshopuy Email
+                </h3>
+                <p>
+                  Con Shop Pay, permite que tus clientes compren un producto
+                  nuevo desde su correo electrónico con unos pocos clics.
+                </p>
+                <div className={styles.tasksTryNowButton}>
+                  <Button
+                    textSize="sm"
+                    onClick={() => {}}
+                    color={ButtonColor.Primary900}
+                  >
+                    Probar ahora
+                  </Button>
+                </div>
+              </div>
+            </section>
+          </Card>
+
           <section>
             <InfoCard
               onClick={() => {}}

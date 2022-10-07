@@ -1,4 +1,5 @@
 import { Button, ButtonColor } from "../Button/Button";
+import { Card } from "../Card/Card";
 import styles from "./Info-Card.module.scss";
 
 interface Props {
@@ -17,18 +18,20 @@ export const InfoCard = ({
   onClick,
 }: Props) => {
   return (
-    <div className={styles.infoCard + " light-box-shadow"}>
-      <div
-        className={styles.infoCardImg}
-        style={{ backgroundImage: "url(" + imageUrl + ")" }}
-      ></div>
-      <h4>{title}</h4>
-      <p>{description}</p>
-      <div className={styles.infoCardButton}>
-        <Button textSize="sm" onClick={onClick} color={ButtonColor.Primary}>
-          {buttonText}
-        </Button>
+    <Card size="info">
+      <div className={styles.infoCard}>
+        <div
+          className={styles.infoCardImg}
+          style={{ backgroundImage: "url(" + imageUrl + ")" }}
+        ></div>
+        <h4>{title}</h4>
+        <p>{description}</p>
+        <div className={styles.infoCardButton}>
+          <Button textSize="sm" onClick={onClick} color={ButtonColor.Primary}>
+            {buttonText}
+          </Button>
+        </div>
       </div>
-    </div>
+    </Card>
   );
 };
