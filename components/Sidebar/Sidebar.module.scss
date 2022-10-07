@@ -1,5 +1,8 @@
+@import "../../styles/colors.scss";
+
 .sidebarContainer {
-  position: absolute;
+  position: fixed;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.6);
   height: 100vh;
   min-width: 100vw;
@@ -49,6 +52,8 @@
     min-width: 300px;
     position: unset;
     transition: 0s;
+    border-right: 1.5px solid map-get($colors, "lighterGrey");
+    background-color: map-get($colors, "backgroundLighterGrey");
   }
 
   .sidebarLogo {
@@ -56,6 +61,7 @@
   }
 
   .sidebar {
+    background-color: map-get($colors, "backgroundLighterGrey");
     left: 0;
     height: 100%;
     transition: 0s;

@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Button.module.scss";
 
 export enum ButtonColor {
@@ -15,12 +16,20 @@ export enum ButtonColor {
 interface Props {
   children: React.ReactNode;
   color: ButtonColor;
-  onClick: () => void;
+  onClick: (e: React.MouseEvent) => void;
   disabled?: boolean;
+  textSize?: "sm" | "md" | "lg";
 }
 
-export const Button = ({ children, color, onClick, disabled }: Props) => {
-  const classNames = [styles.button, styles[color]].join(" ");
+export const Button = ({
+  children,
+  color,
+  onClick,
+  disabled,
+  textSize,
+}: Props) => {
+  const textSizeClass = textSize !== undefined ? styles[textSize] : "";
+  const classNames = [styles.button, styles[color], textSizeClass].join(" ");
 
   return (
     <button disabled={disabled} onClick={onClick} className={classNames}>

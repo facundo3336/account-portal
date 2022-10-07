@@ -13,20 +13,8 @@ export const Sidebar = ({ isOpen }: Props) => {
       <div className={styles.sidebar}>
         <div className={styles.sidebarLogo}></div>
         <SidebarItem
-          itemOptions={[
-            { name: "Seguir", path: "/qweqew" },
-            { name: "Volver", path: "/stores" },
-          ]}
+          itemOptions={[]}
           path="/stores"
-          icon={"home"}
-          itemName="Inicio"
-        />
-        <SidebarItem
-          path="/asdasd"
-          itemOptions={[
-            { name: "Seguir", path: "/aasdasd" },
-            { name: "Volver", path: "/stores" },
-          ]}
           icon={"home"}
           itemName="Inicio"
         />

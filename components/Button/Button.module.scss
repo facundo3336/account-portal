@@ -13,6 +13,18 @@
     cursor: pointer;
   }
 
+  &.sm {
+    font-size: 0.8rem;
+  }
+
+  &.md {
+    font-size: 1rem;
+  }
+
+  &.lg {
+    font-size: 1.1rem;
+  }
+
   &.primary {
     background-color: map-get($colors, "primary");
     color: white;
@@ -107,8 +119,14 @@
     border-color: map-get($colors, "secondary-700");
 
     &:hover {
-      background-color: white;
-      color: map-get($colors, "secondary-700");
+      background-color: darken(
+        $color: map-get($colors, "secondary-700"),
+        $amount: 10
+      );
+      border-color: darken(
+        $color: map-get($colors, "secondary-700"),
+        $amount: 10
+      );
     }
   }
 
