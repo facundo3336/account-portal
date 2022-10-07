@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import styles from "./shopQuestionnaire.module.scss";
 import { QUESTIONNARIE_DATA } from "../../questionnarieData";
 import { Questionnaire } from "../../components/Questionnaire/Questionnaire";
-import { Header } from "../../components/Header/Header";
 import { Button, ButtonColor } from "../../components/Button/Button";
 import { LoadingBar } from "../../components/LoadingBar/LoadingBar";
 import Router from "next/router";
 import { perecentageCompleted } from "../../utils/questionnaire";
+import { Header } from "../../components/Header/Header";
 
 const ShopQuestionnaire: NextPage = () => {
   const [countInfo, setCountInfo] = useState(0);
@@ -19,7 +19,7 @@ const ShopQuestionnaire: NextPage = () => {
   }, [countInfo]);
 
   const onClickRedirect = () => {
-    Router.push("/");
+    Router.push("/shop/home");
   };
 
   const onClickNext = () => {
@@ -35,9 +35,7 @@ const ShopQuestionnaire: NextPage = () => {
   return (
     <div className={styles.shopQuestionnaire + " sideSpacing"}>
       <div className={styles.shopQuestionnaireContainer}>
-        <div className={styles.shopQuestionnaireLogo}>
-          <div className={styles.headerLogo}></div>
-        </div>
+        <Header logo={true} center={false} transparent={false} />
         <div className={styles.loadingBarContainer}>
           <LoadingBar percentage={percentageBar} />
         </div>

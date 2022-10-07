@@ -1,3 +1,4 @@
+import Router from "next/router";
 import styles from "./Header.module.scss";
 
 interface Props {
@@ -20,6 +21,10 @@ export const Header = ({
   const transparentClass = transparent ? styles["transparent"] : "";
   const centerClass = center ? styles["center"] : "";
 
+  const onClickRedirect = () => {
+    Router.push("/");
+  };
+
   return (
     <header
       className={[
@@ -29,7 +34,9 @@ export const Header = ({
         centerClass,
       ].join(" ")}
     >
-      {logo && <div className={styles.headerImg}></div>}
+      {logo && (
+        <div onClick={onClickRedirect} className={styles.headerImg}></div>
+      )}
       <div>{children}</div>
     </header>
   );
