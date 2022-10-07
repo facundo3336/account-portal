@@ -14,9 +14,15 @@ export const Sidebar = ({ isOpen }: Props) => {
         <div className={styles.sidebarLogo}></div>
         <SidebarItem
           itemOptions={[]}
-          path="/stores"
+          path="/shop/home"
           icon={"home"}
           itemName="Inicio"
+        />
+        <SidebarItem
+          itemOptions={[]}
+          path="/shop/orders"
+          icon={"shopping_basket"}
+          itemName="Pedidos"
         />
       </div>
     </div>
