@@ -1,9 +1,7 @@
 import { NextPage } from "next";
-import { homedir } from "os";
 import { useState } from "react";
 import { Button, ButtonColor } from "../../../components/Button/Button";
 import { InfoCard } from "../../../components/Info-Card/Info-Card";
-
 import { Layout } from "../../../components/Layout/Layout";
 import { LoadingBar } from "../../../components/LoadingBar/LoadingBar";
 import { ShopTask } from "../../../components/ShopTask/ShopTask";
@@ -12,7 +10,6 @@ import styles from "./Home.module.scss";
 
 const Home: NextPage = () => {
   const [taskIndex, setTaskIndex] = useState(0);
-  const [taskSelected, setTaskSelected] = useState(taskIndex);
   const [isOpen, setIsOpen] = useState(true);
 
   const onClickTask = (index: number) => {
