@@ -2,7 +2,7 @@ import styles from "./Card.module.scss";
 
 interface Props {
   children: React.ReactNode;
-  size: "sm" | "md" | "lg" | "info";
+  size: "sm" | "md" | "lg" | "info" | "tiny";
 }
 
 export const Card = ({ children, size }: Props) => {

@@ -1,0 +1,202 @@
+@import "../../../styles/colors.scss";
+
+.marketingPage {
+  margin-top: 30px;
+}
+
+.marketingTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.createCampainButton {
+  max-width: 150px;
+}
+
+.calendarSection {
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 0.8rem;
+    margin: 0 0 0 10px;
+  }
+}
+
+.marketingCalendar {
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid map-get($colors, "lighterGrey");
+}
+
+.reportContainer {
+  margin: 5px 0;
+}
+
+.reportInfo {
+  padding: 0 20px;
+
+  h3 {
+    font-size: 0.8rem;
+    text-decoration: dotted;
+    display: inline;
+    border-bottom: dotted 2px map-get($colors, "mediumGrey");
+  }
+
+  span {
+    margin-top: 10px;
+    display: block;
+    font-weight: 500;
+  }
+}
+
+.reportLine {
+  margin-top: 60px;
+  border-top: 2px solid map-get($colors, "primary-400");
+  text-align: right;
+  padding: 10px 20px 0 0;
+
+  a {
+    font-size: 0.8rem;
+    color: blue;
+
+    &:hover {
+      color: map-get($colors, "lightBlue");
+    }
+  }
+}
+
+.reportTitleContainer {
+  position: relative;
+
+  &:hover {
+    cursor: default;
+
+    .reportDescription {
+      visibility: visible;
+    }
+  }
+
+  .reportDescription {
+    visibility: hidden;
+    position: absolute;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+    font-size: 0.85rem;
+    bottom: 20px;
+    background-color: white;
+    max-width: 300px;
+  }
+}
+
+.socialMediaSection {
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+}
+
+.socialMedia {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+
+  h5 {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: blue;
+    font-size: 0.8rem;
+
+    &:hover {
+      color: map-get($colors, "lightBlue");
+    }
+  }
+}
+
+.socialMediaImg {
+  width: 30px;
+  height: 30px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marketingButton {
+  max-width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .marketingPage {
+    padding: 50px;
+    margin-top: 0;
+  }
+
+  .reportsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .reportContainer {
+    margin: 0;
+  }
+
+  .socialMediasContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+
+  .socialMedia {
+    margin-bottom: 10px;
+  }
+
+  .marketingButton {
+    margin-top: 20px;
+  }
+
+  .calendarSection {
+    padding: 0;
+  }
+
+  .marketingTitleContainer {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .marketingPage {
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .marketingPage {
+    max-width: 900px;
+  }
+
+  .reportsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

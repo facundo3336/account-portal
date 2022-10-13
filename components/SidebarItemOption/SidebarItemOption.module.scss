@@ -8,13 +8,13 @@
   border-radius: 5px;
   margin-top: 8px;
   margin-bottom: 8px;
-  border-left: 3px solid white;
+  border-left: 3px solid map-get($colors, "backgroundLighterGrey");
   color: map-get($colors, "grey");
   width: 100%;
 
   &:hover {
     cursor: pointer;
-    background-color: map-get($colors, "backgroundLighterGrey");
+    background-color: map-get($colors, "lighterGrey");
   }
 
   &[aria-selected="true"] {
