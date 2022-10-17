@@ -1,0 +1,102 @@
+@import "../../../styles/colors.scss";
+
+.marketingPage {
+  margin-top: 30px;
+}
+
+.marketingTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.createCampainButton {
+  max-width: 150px;
+}
+
+.calendarSection {
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 0.8rem;
+    margin: 0 0 0 10px;
+  }
+}
+
+.marketingCalendar {
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid map-get($colors, "lighterGrey");
+}
+
+.socialMediaSection {
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+}
+
+.marketingButton {
+  max-width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .marketingPage {
+    padding: 50px;
+    margin-top: 0;
+  }
+
+  .reportsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .reportContainer {
+    margin: 0;
+  }
+
+  .socialMediasContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+
+  .marketingButton {
+    margin-top: 20px;
+  }
+
+  .calendarSection {
+    padding: 0;
+  }
+
+  .marketingTitleContainer {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .marketingPage {
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .marketingPage {
+    max-width: 900px;
+  }
+
+  .reportsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

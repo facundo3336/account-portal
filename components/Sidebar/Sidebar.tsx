@@ -24,6 +24,15 @@ export const Sidebar = ({ isOpen }: Props) => {
           icon={"shopping_basket"}
           itemName="Pedidos"
         />
+        <SidebarItem
+          itemOptions={[
+            { name: "Campañas de marketing", path: "" },
+            { name: "Automatizaciones", path: "" },
+          ]}
+          path="/shop/marketing"
+          icon={"track_changes"}
+          itemName="Marketing"
+        />
       </div>
     </div>
   );
