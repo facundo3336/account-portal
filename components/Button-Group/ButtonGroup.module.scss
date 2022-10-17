@@ -1,0 +1,26 @@
+@import "../../styles/colors.scss";
+
+.buttonsGroup {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttonsGroupButton {
+  border: none;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  padding: 0 20px 15px 20px;
+  font-weight: 500;
+  margin: 15px 5px 15px 5px;
+  border-bottom: 3px solid white;
+
+  &:hover {
+    cursor: pointer;
+    border-color: map-get($colors, "lightGrey");
+  }
+
+  &[aria-selected="true"] {
+    border-color: map-get($colors, "primary");
+  }
+}
