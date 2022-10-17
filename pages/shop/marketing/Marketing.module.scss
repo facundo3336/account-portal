@@ -35,69 +35,6 @@
   border: 1px solid map-get($colors, "lighterGrey");
 }
 
-.reportContainer {
-  margin: 5px 0;
-}
-
-.reportInfo {
-  padding: 0 20px;
-
-  h3 {
-    font-size: 0.8rem;
-    text-decoration: dotted;
-    display: inline;
-    border-bottom: dotted 2px map-get($colors, "mediumGrey");
-  }
-
-  span {
-    margin-top: 10px;
-    display: block;
-    font-weight: 500;
-  }
-}
-
-.reportLine {
-  margin-top: 60px;
-  border-top: 2px solid map-get($colors, "primary-400");
-  text-align: right;
-  padding: 10px 20px 0 0;
-
-  a {
-    font-size: 0.8rem;
-    color: blue;
-
-    &:hover {
-      color: map-get($colors, "lightBlue");
-    }
-  }
-}
-
-.reportTitleContainer {
-  position: relative;
-
-  &:hover {
-    cursor: default;
-
-    .reportDescription {
-      visibility: visible;
-    }
-  }
-
-  .reportDescription {
-    visibility: hidden;
-    position: absolute;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
-    -webkit-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
-    -moz-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
-    font-size: 0.85rem;
-    bottom: 20px;
-    background-color: white;
-    max-width: 300px;
-  }
-}
-
 .socialMediaSection {
   h3 {
     font-size: 0.9rem;
@@ -107,39 +44,6 @@
     font-size: 0.8rem;
     margin-bottom: 20px;
   }
-}
-
-.socialMedia {
-  display: flex;
-  gap: 10px;
-  margin: 30px 0;
-
-  h5 {
-    margin-top: 8px;
-    margin-bottom: 0;
-  }
-
-  p {
-    font-size: 0.8rem;
-  }
-
-  a {
-    text-decoration: underline;
-    color: blue;
-    font-size: 0.8rem;
-
-    &:hover {
-      color: map-get($colors, "lightBlue");
-    }
-  }
-}
-
-.socialMediaImg {
-  width: 30px;
-  height: 30px;
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .marketingButton {
@@ -166,10 +70,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
-  }
-
-  .socialMedia {
-    margin-bottom: 10px;
   }
 
   .marketingButton {
