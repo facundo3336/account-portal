@@ -11,8 +11,16 @@ export const SidebarItemOption = ({ optionName, path }: Props) => {
 
   const isSelected = router.pathname === path;
 
+  const onClickRedirect = () => {
+    router.push(path);
+  };
+
   return (
-    <li className={styles.itemOption} aria-selected={isSelected}>
+    <li
+      onClick={onClickRedirect}
+      className={styles.itemOption}
+      aria-selected={isSelected}
+    >
       {optionName}
     </li>
   );

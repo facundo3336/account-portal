@@ -1,0 +1,37 @@
+@import "../../styles/colors.scss";
+
+.titleContainer {
+  position: relative;
+
+  h3 {
+    font-size: 0.8rem;
+    text-decoration: dotted;
+    display: inline;
+  }
+
+  &:hover {
+    cursor: default;
+
+    .titleDescription {
+      visibility: visible;
+    }
+  }
+
+  .titleUnderline {
+    border-bottom: dotted 2px map-get($colors, "mediumGrey");
+  }
+
+  .titleDescription {
+    visibility: hidden;
+    position: absolute;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+    font-size: 0.85rem;
+    bottom: 20px;
+    background-color: white;
+    max-width: 300px;
+  }
+}

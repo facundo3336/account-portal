@@ -19,6 +19,8 @@
     box-shadow: none;
     border-radius: 0;
     padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   &.sm {
@@ -37,16 +39,6 @@
 @media screen and (min-width: 768px) {
   .card {
     padding: 30px 65px 65px 65px;
-
-    &.info {
-      box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
-      -webkit-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
-      -moz-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
-      border-radius: 5px;
-      overflow: hidden;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
 
     &.sm {
       width: 300px;
@@ -93,7 +85,10 @@
     }
 
     &.info {
-      padding: 20px;
+      box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+      -webkit-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
+      border-radius: 5px;
     }
   }
 }
