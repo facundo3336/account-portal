@@ -26,7 +26,10 @@ export const Sidebar = ({ isOpen }: Props) => {
         />
         <SidebarItem
           itemOptions={[
-            { name: "Campañas de marketing", path: "" },
+            {
+              name: "Campañas de marketing",
+              path: "/shop/marketing/marketing-campaign",
+            },
             { name: "Automatizaciones", path: "" },
           ]}
           path="/shop/marketing"

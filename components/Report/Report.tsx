@@ -1,5 +1,6 @@
 import styles from "./Report.module.scss";
 import { Card } from "../Card/Card";
+import { Title } from "../Title/Title";
 
 interface Props {
   title: string;
@@ -14,10 +15,7 @@ export const Report = ({ title, description, link, reportData }: Props) => {
       <Card size="tiny">
         <div>
           <div className={styles.reportInfo}>
-            <div className={styles.reportTitleContainer}>
-              <h3>{title}</h3>
-              <p className={styles.reportDescription}>{description}</p>
-            </div>
+            <Title underline={true} title={title} description={description} />
             <span>{reportData} -</span>
           </div>
           <div className={styles.reportLine}>
