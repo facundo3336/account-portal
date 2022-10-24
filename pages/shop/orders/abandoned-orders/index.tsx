@@ -46,7 +46,7 @@ const AbandonedOrders: NextPage = () => {
             </div>
           </Card>
         )}
-        <div style={{ width: "900px" }}>
+        <div className={styles.abandonedOrdersContent}>
           <InfoCard
             imageUrl="/automations-page/error-cart.svg"
             title="Los pedidos abandonados aparecerán aquí"
