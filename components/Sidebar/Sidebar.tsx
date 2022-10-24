@@ -30,7 +30,7 @@ export const Sidebar = ({ isOpen }: Props) => {
               name: "Campañas de marketing",
               path: "/shop/marketing/marketing-campaign",
             },
-            { name: "Automatizaciones", path: "" },
+            { name: "Automatizaciones", path: "/shop/marketing/automations" },
           ]}
           path="/shop/marketing"
           icon={"track_changes"}

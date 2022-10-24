@@ -61,7 +61,6 @@
       -webkit-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
       -moz-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
       border-radius: 5px;
-      max-width: 400px;
       padding-top: 15px;
       padding-bottom: 15px;
     }
@@ -89,6 +88,10 @@
       -webkit-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
       -moz-box-shadow: -1px 0px 10px -4px rgba(0, 0, 0, 0.35);
       border-radius: 5px;
+    }
+
+    &.tiny {
+      max-width: 400px;
     }
   }
 }
