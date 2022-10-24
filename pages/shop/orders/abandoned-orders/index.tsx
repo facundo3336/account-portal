@@ -46,11 +46,13 @@ const AbandonedOrders: NextPage = () => {
             </div>
           </Card>
         )}
-        <InfoCard
-          imageUrl="/automations-page/error-cart.svg"
-          title="Los pedidos abandonados aparecerán aquí"
-          description="Puedes ver cuando los clientes agregan un artículo a su carrito pero no completan el pago. También puedes enviarles por correo electrónico un enlace a su carrito."
-        />
+        <div style={{ width: "900px" }}>
+          <InfoCard
+            imageUrl="/automations-page/error-cart.svg"
+            title="Los pedidos abandonados aparecerán aquí"
+            description="Puedes ver cuando los clientes agregan un artículo a su carrito pero no completan el pago. También puedes enviarles por correo electrónico un enlace a su carrito."
+          />
+        </div>
         <div className={styles.readMore}>
           <p>Leer más acerca de</p>
           <a href="#">pedidos abandonados</a>
