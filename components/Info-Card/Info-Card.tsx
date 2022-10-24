@@ -6,17 +6,14 @@ interface Props {
   imageUrl: string;
   title: string;
   description: string;
-  buttonText: string;
-  onClick: () => void;
+  buttons: {
+    text: string;
+    onClick: () => void;
+    color: ButtonColor;
+  }[];
 }
 
-export const InfoCard = ({
-  imageUrl,
-  title,
-  description,
-  buttonText,
-  onClick,
-}: Props) => {
+export const InfoCard = ({ imageUrl, title, description, buttons }: Props) => {
   return (
     <Card size="info">
       <div className={styles.infoCard}>
@@ -27,9 +24,18 @@ export const InfoCard = ({
         <h4>{title}</h4>
         <p>{description}</p>
         <div className={styles.infoCardButton}>
-          <Button textSize="sm" onClick={onClick} color={ButtonColor.Primary}>
-            {buttonText}
-          </Button>
+          {buttons.map((button) => {
+            return (
+              <Button
+                key={button.text}
+                textSize="sm"
+                onClick={button.onClick}
+                color={button.color}
+              >
+                {button.text}
+              </Button>
+            );
+          })}
         </div>
       </div>
     </Card>

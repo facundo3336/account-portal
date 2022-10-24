@@ -36,6 +36,12 @@ export const Sidebar = ({ isOpen }: Props) => {
           icon={"track_changes"}
           itemName="Marketing"
         />
+        <SidebarItem
+          itemOptions={[]}
+          path="/shop/customers"
+          icon={"person_outline"}
+          itemName="Clientes"
+        />
       </div>
     </div>
   );
