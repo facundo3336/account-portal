@@ -2,6 +2,7 @@
 
 .layoutChildren {
   margin: 0 auto;
+  flex-grow: 1;
 }
 
 .layoutHeaderContainer {
@@ -15,6 +16,7 @@
 
 .layoutSidebarChildrenContainer {
   background-color: map-get($colors, "backgroundLighterGrey");
+  flex-grow: 1;
 }
 
 .layout {

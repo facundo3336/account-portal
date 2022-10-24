@@ -36,6 +36,12 @@ export const Sidebar = ({ isOpen }: Props) => {
           icon={"track_changes"}
           itemName="Marketing"
         />
+        <SidebarItem
+          itemOptions={[]}
+          path="/shop/discount"
+          icon={"discount"}
+          itemName="Descuentos"
+        />
       </div>
     </div>
   );
