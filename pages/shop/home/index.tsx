@@ -98,9 +98,14 @@ const Home: NextPage = () => {
 
           <section>
             <InfoCard
-              onClick={() => {}}
+              buttons={[
+                {
+                  text: "Comenzar una campana",
+                  onClick: () => {},
+                  color: ButtonColor.Primary,
+                },
+              ]}
               imageUrl="/tasks-img/email.svg"
-              buttonText="Comenzar una campana"
               title="Mejora tu marketing con Shopify Email"
               description="El 99% de los consumidores verifica a diario su correo electrónico. Crea relaciones con los clientes y aumenta tus ventas gracias al correo electrónico, directamente desde el panel de control"
             />
