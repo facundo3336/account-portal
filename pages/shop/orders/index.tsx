@@ -8,6 +8,7 @@ const Orders: NextPage = () => {
   return (
     <Layout>
       <div className={styles.ordersPage}>
+        <h3>Pedidos</h3>
         <InfoCard
           buttons={[
             {
