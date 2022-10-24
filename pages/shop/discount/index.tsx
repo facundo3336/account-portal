@@ -29,8 +29,13 @@ const Discount: NextPage = () => {
         </div>
         <InfoCard
           imageUrl="/discount-scissors.svg"
-          onClick={() => {}}
-          buttonText="Crear descuento"
+          buttons={[
+            {
+              text: "Crear descuento",
+              onClick: () => {},
+              color: ButtonColor.Primary,
+            },
+          ]}
           title="Gestionar descuentos y promociones"
           description="Crear códigos de descuento y descuentos automáticos que se apliquen en la pantalla de pago. También puedes usar descuentos con precios de comparación."
         />
