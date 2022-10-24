@@ -25,6 +25,19 @@ export const Sidebar = ({ isOpen }: Props) => {
           itemName="Pedidos"
         />
         <SidebarItem
+          itemOptions={[]}
+          path="/shop/products"
+          icon={"shopping_bag"}
+          itemName="Productos"
+        />
+        <SidebarItem
+          itemOptions={[]}
+          path="/shop/customers"
+          icon={"person_outline"}
+          itemName="Clientes"
+        />
+
+        <SidebarItem
           itemOptions={[
             {
               name: "Campañas de marketing",
@@ -36,14 +49,9 @@ export const Sidebar = ({ isOpen }: Props) => {
           icon={"track_changes"}
           itemName="Marketing"
         />
+
         <SidebarItem
           itemOptions={[]}
-          path="/shop/customers"
-          icon={"person_outline"}
-          itemName="Clientes"
-        />
-        <SidebarItem
-          itemOptions={[]}     
           path="/shop/discount"
           icon={"discount"}
           itemName="Descuentos"

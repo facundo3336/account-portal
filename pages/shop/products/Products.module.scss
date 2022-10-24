@@ -1,0 +1,51 @@
+@import "../../../styles/colors.scss";
+
+.products {
+  padding-top: 30px;
+}
+
+.productsTitle {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    max-width: 150px;
+    height: 50px;
+  }
+}
+
+.readMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+
+  a {
+    margin-left: 5px;
+    color: blue;
+    text-decoration: underline;
+
+    &:hover {
+      color: map-get($colors, "lightBlue");
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .products {
+    max-width: 700px;
+    padding-top: 10px;
+  }
+
+  .productsTitle {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .products {
+    max-width: 900px;
+  }
+}
