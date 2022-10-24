@@ -1,0 +1,233 @@
+@import "../../../../styles/colors.scss";
+
+.marketingCampaignInfoContainer {
+  h3 {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+}
+
+.automationsPage {
+  padding-bottom: 50px;
+}
+
+.createAutomationButton {
+  max-width: 200px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.marketingCampaignInfoSection {
+  text-align: center;
+  border-top: dotted 2px map-get($colors, "mediumGrey");
+  padding-top: 20px;
+  margin-top: 20px;
+
+  a {
+    font-size: 0.85rem;
+    color: blue;
+
+    &:hover {
+      color: map-get($colors, "lightBlue");
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.resultsTitle {
+  padding: 0 20px 25px 20px;
+  h6 {
+    font-size: 0.9rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
+}
+
+.automationsDetails {
+  margin-top: 15px;
+  border: 1px solid map-get($colors, "mediumGrey");
+  border-radius: 5px;
+}
+
+.automationsCampaignsContainer {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.automationsResultTitle {
+  margin-bottom: 20px;
+}
+
+.automationsResult {
+  padding: 0 20px;
+
+  span {
+    display: block;
+  }
+}
+
+.recoverSellsClose {
+  display: none;
+}
+
+.recoverSellsSection {
+  padding: 15px 0;
+}
+
+.recoverSellsTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h4 {
+    font-size: 0.9rem;
+    margin: 0 0 20px 0;
+  }
+
+  .newButton {
+    font-size: 0.75rem;
+    padding: 5px 15px;
+    background-color: map-get($colors, "secondary-200");
+    border-radius: 20px;
+  }
+
+  .closeCross {
+    font-size: 1rem;
+    color: map-get($colors, "lightGrey");
+
+    &:hover {
+      cursor: pointer;
+      color: black;
+    }
+  }
+}
+
+.automationDescriptionText {
+  font-size: 0.8rem;
+  margin: 25px 0;
+}
+
+.automationDetails {
+  padding: 5px 10px 10px 10px;
+
+  &:first-child {
+    border-bottom: 1px solid map-get($colors, "mediumGrey");
+  }
+
+  &:last-child {
+    border-top: 1px solid map-get($colors, "mediumGrey");
+  }
+
+  .automationImg {
+    width: 90px;
+    height: 90px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .automationDescription {
+    width: 100%;
+  }
+
+  .automationDescriptionContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    max-height: 60px;
+    gap: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .resultsTitle {
+    display: flex;
+    align-items: center;
+
+    h6 {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  .automationDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .buttonsContainer {
+      width: 35%;
+    }
+
+    .automationDescription {
+      max-width: 350px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .titleContainer {
+    padding: 0;
+  }
+
+  .automationDetails {
+    padding: 10px 20px;
+  }
+
+  .recoverSellsTitle {
+    h4 {
+      display: inline;
+    }
+
+    .newButton {
+      margin-left: 10px;
+    }
+  }
+
+  .automationsPage {
+    margin-top: 30px;
+  }
+
+  .automationsCampaignsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .resultsTitle {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .automationsPage {
+    max-width: 900px;
+  }
+}
