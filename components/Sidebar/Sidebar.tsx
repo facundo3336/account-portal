@@ -38,6 +38,12 @@ export const Sidebar = ({ isOpen }: Props) => {
         />
         <SidebarItem
           itemOptions={[]}
+          path="/shop/customers"
+          icon={"person_outline"}
+          itemName="Clientes"
+        />
+        <SidebarItem
+          itemOptions={[]}     
           path="/shop/discount"
           icon={"discount"}
           itemName="Descuentos"
