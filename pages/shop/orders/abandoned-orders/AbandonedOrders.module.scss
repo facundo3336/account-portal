@@ -1,0 +1,98 @@
+@import "../../../../styles/colors.scss";
+
+.abandonedOrders {
+  padding-top: 30px;
+
+  h3 {
+    padding: 0 20px;
+  }
+}
+
+.updateSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    top: 3px;
+    right: 0;
+    font-size: 1rem;
+    position: absolute;
+    color: map-get($colors, "lightGrey");
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  h6 {
+    font-size: 0.95rem;
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  button {
+    max-width: 300px;
+  }
+}
+
+.readMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+
+  a {
+    color: blue;
+    text-decoration: underline;
+    margin-left: 5px;
+
+    &:hover {
+      color: map-get($colors, "lightBlue");
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .updateContent {
+    width: 75%;
+  }
+  .abandonedImg {
+    background-size: 105%;
+    width: 25%;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../../../../public/automations-page/cart-checked.svg");
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .abandonedOrders {
+    max-width: 700px;
+
+    h3 {
+      padding: 0;
+    }
+  }
+
+  .updateContent {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .abandonedOrders {
+    max-width: 900px;
+  }
+
+  .abandonedOrdersContent {
+    width: 900px;
+  }
+}

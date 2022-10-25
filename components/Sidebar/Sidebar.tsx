@@ -23,12 +23,27 @@ export const Sidebar = ({ isOpen }: Props) => {
             {
               name: "Preliminares",
               path: "/shop/orders/preliminaries",
+              name: "Pedidos abandonados",
+              path: "/shop/orders/abandoned-orders",
             },
           ]}
           path="/shop/orders"
           icon={"shopping_basket"}
           itemName="Pedidos"
         />
+        <SidebarItem
+          itemOptions={[]}
+          path="/shop/products"
+          icon={"shopping_bag"}
+          itemName="Productos"
+        />
+        <SidebarItem
+          itemOptions={[]}
+          path="/shop/customers"
+          icon={"person_outline"}
+          itemName="Clientes"
+        />
+
         <SidebarItem
           itemOptions={[
             {
@@ -41,6 +56,7 @@ export const Sidebar = ({ isOpen }: Props) => {
           icon={"track_changes"}
           itemName="Marketing"
         />
+
         <SidebarItem
           itemOptions={[]}
           path="/shop/customers"
