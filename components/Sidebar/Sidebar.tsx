@@ -43,6 +43,10 @@ export const Sidebar = ({ isOpen }: Props) => {
               name: "Transferencias",
               path: "/shop/products/transfers",
             },
+            {
+              name: "Tarjetas de regalo",
+              path: "/shop/products/gift-cards",
+            },
           ]}
           path="/shop/products"
           icon={"shopping_bag"}
