@@ -46,8 +46,6 @@ const Discount: NextPage = () => {
           linkText="descuentos"
           description="Leer más acerca de"
         />
-      </div>
-        
       </StorePagesContainer>
     </Layout>
   );

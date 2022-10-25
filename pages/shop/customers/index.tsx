@@ -6,7 +6,6 @@ import { ButtonColor } from "../../../components/Button/Button";
 import { ReadMore } from "../../../components/Read-more/ReadMore";
 import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
 
-
 const Customers: NextPage = () => {
   return (
     <Layout>
@@ -34,7 +33,7 @@ const Customers: NextPage = () => {
           linkText="clientes"
           description="Leer más acerca de"
         />
-      </div>
+      </StorePagesContainer>
     </Layout>
   );
 };
