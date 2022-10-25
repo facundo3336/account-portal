@@ -6,7 +6,7 @@ interface Props {
   imageUrl: string;
   title: string;
   description: string;
-  buttons: {
+  buttons?: {
     text: string;
     onClick: () => void;
     color: ButtonColor;
@@ -24,18 +24,19 @@ export const InfoCard = ({ imageUrl, title, description, buttons }: Props) => {
         <h4>{title}</h4>
         <p>{description}</p>
         <div className={styles.infoCardButton}>
-          {buttons.map((button) => {
-            return (
-              <Button
-                key={button.text}
-                textSize="sm"
-                onClick={button.onClick}
-                color={button.color}
-              >
-                {button.text}
-              </Button>
-            );
-          })}
+          {buttons !== undefined &&
+            buttons.map((button) => {
+              return (
+                <Button
+                  key={button.text}
+                  textSize="sm"
+                  onClick={button.onClick}
+                  color={button.color}
+                >
+                  {button.text}
+                </Button>
+              );
+            })}
         </div>
       </div>
     </Card>
