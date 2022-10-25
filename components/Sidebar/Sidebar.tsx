@@ -21,6 +21,8 @@ export const Sidebar = ({ isOpen }: Props) => {
         <SidebarItem
           itemOptions={[
             {
+              name: "Preliminares",
+              path: "/shop/orders/preliminaries",
               name: "Pedidos abandonados",
               path: "/shop/orders/abandoned-orders",
             },
