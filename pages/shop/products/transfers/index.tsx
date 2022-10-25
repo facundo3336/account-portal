@@ -2,36 +2,35 @@ import { NextPage } from "next";
 import { InfoCard } from "../../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../../components/Layout/Layout";
 import { ButtonColor } from "../../../../components/Button/Button";
-import styles from "./Preliminaries.module.scss";
-import { ReadMore } from "../../../../components/Read-more/ReadMore";
 import { StorePagesContainer } from "../../../../components/StorePagesContainer/StorePagesContainer";
+import styles from "./Transfers.module.scss";
+import { ReadMore } from "../../../../components/Read-more/ReadMore";
 
-const Preliminaries: NextPage = () => {
+const Transfers: NextPage = () => {
   return (
     <Layout>
       <StorePagesContainer>
-        <h3 className={styles.preliminariesTitle}>Preliminares</h3>
+        <h3 className={styles.transfersTitle}>Transferencias</h3>
         <InfoCard
           buttons={[
             {
-              text: "Crear pedido preliminar",
+              text: "Crear transferencia",
               onClick: () => {},
               color: ButtonColor.Primary,
             },
           ]}
-          imageUrl="/orders-img/preliminaries.svg"
-          title="Crear manualmente pedidos y facturas"
-          description="Usa pedidos preliminares para recibir pedidos por teléfono, enviar facturas a clientes por correo electrónico y cobrar pagos."
+          imageUrl="/transfer.svg"
+          title="Gestiona tu inventario entrante"
+          description="Puedes hacer seguimiento y recibir inventario entrante de tus proveedores y sucursales."
         />
-
         <ReadMore
           link="#"
+          linkText="transferencias de inventario"
           description="Más información acerca de"
-          linkText="crear pedidos preliminares"
         />
       </StorePagesContainer>
     </Layout>
   );
 };
 
-export default Preliminaries;
+export default Transfers;

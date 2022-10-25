@@ -60,9 +60,7 @@ const AbandonedOrders: NextPage = () => {
           linkText="pedidos abandonados"
           description="Leer más acerca de"
         />
-      </div>    
       </StorePagesContainer>
-
     </Layout>
   );
 };
