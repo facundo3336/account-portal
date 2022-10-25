@@ -1,16 +1,9 @@
-.ordersPage {
-  padding-bottom: 30px;
-  margin-top: 30px;
-
-  h3 {
-    padding: 0 20px;
-  }
+.ordersTitle {
+  padding: 0 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  .ordersPage {
-    h3 {
-      padding: 0;
-    }
+  .ordersTitle {
+    padding: 0;
   }
 }

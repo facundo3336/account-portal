@@ -3,11 +3,12 @@ import { InfoCard } from "../../../components/Info-Card/Info-Card";
 import { Button, ButtonColor } from "../../../components/Button/Button";
 import styles from "./Products.module.scss";
 import { Layout } from "../../../components/Layout/Layout";
+import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
 
 const Products: NextPage = () => {
   return (
     <Layout>
-      <div className={styles.products}>
+      <StorePagesContainer>
         <div className={styles.productsTitle}>
           <h3>Productos</h3>
           <Button textSize="sm" color={ButtonColor.Grey} onClick={() => {}}>
@@ -35,7 +36,7 @@ const Products: NextPage = () => {
           <p>Leer mas acerca de</p>
           <a href="#">productos</a>
         </div>
-      </div>
+      </StorePagesContainer>
     </Layout>
   );
 };

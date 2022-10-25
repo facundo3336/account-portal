@@ -5,6 +5,7 @@ import { Card } from "../../../../components/Card/Card";
 import { Title } from "../../../../components/Title/Title";
 import { Button, ButtonColor } from "../../../../components/Button/Button";
 import { useState } from "react";
+import { StorePagesContainer } from "../../../../components/StorePagesContainer/StorePagesContainer";
 
 const Automations: NextPage = () => {
   const [close, setClose] = useState(false);
@@ -15,7 +16,7 @@ const Automations: NextPage = () => {
 
   return (
     <Layout>
-      <div className={styles.automationsPage}>
+      <StorePagesContainer>
         <div className={styles.titleContainer}>
           <h3>Automatizaciones</h3>
           <div className={styles.createAutomationButton}>
@@ -133,7 +134,7 @@ const Automations: NextPage = () => {
                     <div
                       style={{
                         backgroundImage:
-                          "url(" + "/automations-page/cart-checked.svg" + ")",
+                          "url(" + "/automations-page/lost-product.svg" + ")",
                       }}
                       className={styles.automationImg}
                     ></div>
@@ -167,7 +168,7 @@ const Automations: NextPage = () => {
                     <div
                       style={{
                         backgroundImage:
-                          "url(" + "/automations-page/cart-checked.svg" + ")",
+                          "url(" + "/automations-page/cart-return.svg" + ")",
                       }}
                       className={styles.automationImg}
                     ></div>
@@ -216,7 +217,7 @@ const Automations: NextPage = () => {
             </div>
           </Card>
         </div>
-      </div>
+      </StorePagesContainer>
     </Layout>
   );
 };

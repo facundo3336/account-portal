@@ -3,12 +3,13 @@ import { InfoCard } from "../../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../../components/Layout/Layout";
 import { ButtonColor } from "../../../../components/Button/Button";
 import styles from "./Preliminaries.module.scss";
+import { StorePagesContainer } from "../../../../components/StorePagesContainer/StorePagesContainer";
 
 const Preliminaries: NextPage = () => {
   return (
     <Layout>
-      <div className={styles.preliminaries}>
-        <h3>Preliminares</h3>
+      <StorePagesContainer>
+        <h3 className={styles.preliminariesTitle}>Preliminares</h3>
         <InfoCard
           buttons={[
             {
@@ -25,7 +26,7 @@ const Preliminaries: NextPage = () => {
           <p>Más información acerca de</p>
           <a href="#">crear pedidos preliminares</a>
         </div>
-      </div>
+      </StorePagesContainer>
     </Layout>
   );
 };

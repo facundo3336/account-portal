@@ -2,12 +2,13 @@ import { NextPage } from "next";
 import { Button, ButtonColor } from "../../../components/Button/Button";
 import { InfoCard } from "../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../components/Layout/Layout";
+import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
 import styles from "./Discount.module.scss";
 
 const Discount: NextPage = () => {
   return (
     <Layout>
-      <div className={styles.discount}>
+      <StorePagesContainer>
         <div className={styles.discountTitle}>
           <h3>Descuentos</h3>
           <div className={styles.discountButtons}>
@@ -43,7 +44,7 @@ const Discount: NextPage = () => {
           <p>Leer más acerca de</p>
           <a href="#">descuentos</a>
         </div>
-      </div>
+      </StorePagesContainer>
     </Layout>
   );
 };
