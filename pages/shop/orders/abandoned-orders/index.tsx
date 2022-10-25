@@ -4,6 +4,7 @@ import { Button, ButtonColor } from "../../../../components/Button/Button";
 import { Card } from "../../../../components/Card/Card";
 import { InfoCard } from "../../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../../components/Layout/Layout";
+import { ReadMore } from "../../../../components/Read-more/ReadMore";
 import styles from "./AbandonedOrders.module.scss";
 
 const AbandonedOrders: NextPage = () => {
@@ -53,10 +54,11 @@ const AbandonedOrders: NextPage = () => {
             description="Puedes ver cuando los clientes agregan un artículo a su carrito pero no completan el pago. También puedes enviarles por correo electrónico un enlace a su carrito."
           />
         </div>
-        <div className={styles.readMore}>
-          <p>Leer más acerca de</p>
-          <a href="#">pedidos abandonados</a>
-        </div>
+        <ReadMore
+          link="#"
+          linkText="pedidos abandonados"
+          description="Leer más acerca de"
+        />
       </div>
     </Layout>
   );

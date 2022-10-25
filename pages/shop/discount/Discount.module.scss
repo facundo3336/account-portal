@@ -22,23 +22,6 @@
   gap: 10px;
 }
 
-.discountReadMore {
-  display: flex;
-  align-items: center;
-  font-size: 0.8rem;
-  justify-content: center;
-
-  a {
-    color: blue;
-    margin-left: 5px;
-    text-decoration: underline;
-
-    &:hover {
-      color: map-get($colors, "lightBlue");
-    }
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .discount {
     max-width: 700px;

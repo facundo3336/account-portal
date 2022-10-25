@@ -2,35 +2,34 @@ import { NextPage } from "next";
 import { InfoCard } from "../../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../../components/Layout/Layout";
 import { ButtonColor } from "../../../../components/Button/Button";
-import styles from "./Preliminaries.module.scss";
+import styles from "./Inventory.module.scss";
 import { ReadMore } from "../../../../components/Read-more/ReadMore";
 
-const Preliminaries: NextPage = () => {
+const Inventory: NextPage = () => {
   return (
     <Layout>
-      <div className={styles.preliminaries}>
-        <h3>Preliminares</h3>
+      <div className={styles.inventory}>
+        <h3>Inventario</h3>
         <InfoCard
           buttons={[
             {
-              text: "Crear pedido preliminar",
+              text: "Ir a productos",
               onClick: () => {},
               color: ButtonColor.Primary,
             },
           ]}
-          imageUrl="/orders-img/preliminaries.svg"
-          title="Crear manualmente pedidos y facturas"
-          description="Usa pedidos preliminares para recibir pedidos por teléfono, enviar facturas a clientes por correo electrónico y cobrar pagos."
+          imageUrl="/inventory.svg"
+          title="Hacer seguimiento de tu inventario"
+          description="Cuando activas el seguimiento de inventario en tus productos, puedes ver y ajustar sus recuentos de inventario aquí."
         />
-
         <ReadMore
           link="#"
           description="Más información acerca de"
-          linkText="crear pedidos preliminares"
+          linkText="cómo gestionar el inventario"
         />
       </div>
     </Layout>
   );
 };
 
-export default Preliminaries;
+export default Inventory;

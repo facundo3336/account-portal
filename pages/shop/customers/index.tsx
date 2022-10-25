@@ -3,6 +3,7 @@ import { InfoCard } from "../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../components/Layout/Layout";
 import styles from "./Customers.module.scss";
 import { ButtonColor } from "../../../components/Button/Button";
+import { ReadMore } from "../../../components/Read-more/ReadMore";
 
 const Customers: NextPage = () => {
   return (
@@ -26,10 +27,11 @@ const Customers: NextPage = () => {
             },
           ]}
         />
-        <div className={styles.readMore}>
-          <p>Leer más acerca de</p>
-          <a href="#">clientes</a>
-        </div>
+        <ReadMore
+          link="#"
+          linkText="clientes"
+          description="Leer más acerca de"
+        />
       </div>
     </Layout>
   );
