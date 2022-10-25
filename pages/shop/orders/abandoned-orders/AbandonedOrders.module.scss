@@ -1,11 +1,8 @@
 @import "../../../../styles/colors.scss";
 
-.abandonedOrders {
-  padding-top: 30px;
-
-  h3 {
-    padding: 0 20px;
-  }
+.abandonedOrdersTitle {
+  padding: 0 20px;
+  font-size: 1rem;
 }
 
 .updateSection {
@@ -74,12 +71,8 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .abandonedOrders {
-    max-width: 700px;
-
-    h3 {
-      padding: 0;
-    }
+  .abandonedOrdersTitle {
+    padding: 0;
   }
 
   .updateContent {
@@ -88,10 +81,6 @@
 }
 
 @media screen and (min-width: 1340px) {
-  .abandonedOrders {
-    max-width: 900px;
-  }
-
   .abandonedOrdersContent {
     width: 900px;
   }

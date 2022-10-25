@@ -1,11 +1,5 @@
 @import "../../../styles/colors.scss";
 
-.discount {
-  padding-bottom: 30px;
-  height: 100%;
-  padding-top: 30px;
-}
-
 .discountTitle {
   display: flex;
   justify-content: space-between;
@@ -40,22 +34,11 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .discount {
-    max-width: 700px;
-    padding: 30px 0;
-  }
-
   .discountTitle {
     padding: 0;
   }
 
   .discountButtons {
     width: 400px;
-  }
-}
-
-@media screen and (min-width: 1340px) {
-  .discount {
-    max-width: 900px;
   }
 }

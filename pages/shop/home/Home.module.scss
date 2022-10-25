@@ -1,8 +1,6 @@
 @import "../../../styles/colors.scss";
 
 .shopHomePage {
-  padding-bottom: 30px;
-
   &.isClose {
     .tasksContainer {
       max-height: 0;
@@ -95,10 +93,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .shopHomeSection {
-    padding: 50px;
-  }
-
   .loadingBarContainer {
     width: 470px;
   }
@@ -106,10 +100,8 @@
 
 @media screen and (min-width: 1024px) {
   .shopHomeSection {
-    margin-top: 30px;
     padding: 50px;
     border-radius: 5px;
-    max-width: 700px;
   }
 
   .homeExpressPayContainer {
@@ -122,11 +114,5 @@
 
   .loadingBarContainer {
     width: 550px;
-  }
-}
-
-@media screen and (min-width: 1340px) {
-  .shopHomeSection {
-    max-width: 900px;
   }
 }

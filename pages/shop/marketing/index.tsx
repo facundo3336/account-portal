@@ -4,12 +4,13 @@ import { Card } from "../../../components/Card/Card";
 import { Layout } from "../../../components/Layout/Layout";
 import { Report } from "../../../components/Report/Report";
 import { SocialMedia } from "../../../components/Social-media/SocialMedia";
+import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
 import styles from "./Marketing.module.scss";
 
 const Marketing: NextPage = () => {
   return (
     <Layout>
-      <div className={styles.marketingPage}>
+      <StorePagesContainer>
         <div className={styles.marketingTitleContainer}>
           <h3>Marketing</h3>
           <div className={styles.createCampainButton}>
@@ -143,7 +144,7 @@ const Marketing: NextPage = () => {
             </Button>
           </div>
         </Card>
-      </div>
+      </StorePagesContainer>
     </Layout>
   );
 };

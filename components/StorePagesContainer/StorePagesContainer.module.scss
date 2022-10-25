@@ -1,0 +1,17 @@
+.storePagesContainer {
+  padding-top: 30px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .storePagesContainer {
+    max-width: 700px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .storePagesContainer {
+    max-width: 900px;
+  }
+}
