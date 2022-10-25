@@ -12,23 +12,6 @@
   }
 }
 
-.readMore {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-
-  a {
-    margin-left: 5px;
-    color: blue;
-    text-decoration: underline;
-
-    &:hover {
-      color: map-get($colors, "lightBlue");
-    }
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .productsTitle {
     padding: 0;

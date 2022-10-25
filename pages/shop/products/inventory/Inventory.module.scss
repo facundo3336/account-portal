@@ -1,0 +1,22 @@
+.inventory {
+  padding-top: 30px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .inventory {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .inventory {
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .inventory {
+    max-width: 900px;
+  }
+}

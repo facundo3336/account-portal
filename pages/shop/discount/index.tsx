@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { Button, ButtonColor } from "../../../components/Button/Button";
 import { InfoCard } from "../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../components/Layout/Layout";
+import { ReadMore } from "../../../components/Read-more/ReadMore";
 import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
 import styles from "./Discount.module.scss";
 
@@ -40,10 +41,13 @@ const Discount: NextPage = () => {
           title="Gestionar descuentos y promociones"
           description="Crear códigos de descuento y descuentos automáticos que se apliquen en la pantalla de pago. También puedes usar descuentos con precios de comparación."
         />
-        <div className={styles.discountReadMore}>
-          <p>Leer más acerca de</p>
-          <a href="#">descuentos</a>
-        </div>
+        <ReadMore
+          link="#"
+          linkText="descuentos"
+          description="Leer más acerca de"
+        />
+      </div>
+        
       </StorePagesContainer>
     </Layout>
   );

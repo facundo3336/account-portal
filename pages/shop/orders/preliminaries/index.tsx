@@ -3,6 +3,7 @@ import { InfoCard } from "../../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../../components/Layout/Layout";
 import { ButtonColor } from "../../../../components/Button/Button";
 import styles from "./Preliminaries.module.scss";
+import { ReadMore } from "../../../../components/Read-more/ReadMore";
 import { StorePagesContainer } from "../../../../components/StorePagesContainer/StorePagesContainer";
 
 const Preliminaries: NextPage = () => {
@@ -22,11 +23,17 @@ const Preliminaries: NextPage = () => {
           title="Crear manualmente pedidos y facturas"
           description="Usa pedidos preliminares para recibir pedidos por teléfono, enviar facturas a clientes por correo electrónico y cobrar pagos."
         />
-        <div className={styles.readMore}>
-          <p>Más información acerca de</p>
-          <a href="#">crear pedidos preliminares</a>
-        </div>
+
+
+        <ReadMore
+          link="#"
+          description="Más información acerca de"
+          linkText="crear pedidos preliminares"
+        />
+      </div>
+
       </StorePagesContainer>
+
     </Layout>
   );
 };

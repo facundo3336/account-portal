@@ -39,23 +39,6 @@
   }
 }
 
-.readMore {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-
-  a {
-    color: blue;
-    text-decoration: underline;
-    margin-left: 5px;
-
-    &:hover {
-      color: map-get($colors, "lightBlue");
-    }
-  }
-}
-
 @media screen and (min-width: 768px) {
   .updateContent {
     width: 75%;

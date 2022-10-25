@@ -45,20 +45,6 @@
   }
 }
 
-.readMore {
-  font-size: 0.85rem;
-  text-align: center;
-
-  a {
-    color: blue;
-    text-decoration: underline;
-
-    &:hover {
-      color: map-get($colors, "lightBlue");
-    }
-  }
-}
-
 .marketingCampaignInfoSection {
   text-align: center;
   border-top: dotted 2px map-get($colors, "mediumGrey");

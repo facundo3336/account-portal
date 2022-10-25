@@ -25,7 +25,7 @@ export const Sidebar = ({ isOpen }: Props) => {
               path: "/shop/orders/preliminaries",
             },
             {
-              name: "Ordenes abandonadas",
+              name: "Pedidos abandonados",
               path: "/shop/orders/abandoned-orders",
             },
           ]}
@@ -34,7 +34,12 @@ export const Sidebar = ({ isOpen }: Props) => {
           itemName="Pedidos"
         />
         <SidebarItem
-          itemOptions={[]}
+          itemOptions={[
+            {
+              name: "Inventario",
+              path: "/shop/products/inventory",
+            },
+          ]}
           path="/shop/products"
           icon={"shopping_bag"}
           itemName="Productos"
@@ -58,7 +63,6 @@ export const Sidebar = ({ isOpen }: Props) => {
           icon={"track_changes"}
           itemName="Marketing"
         />
-
         <SidebarItem
           itemOptions={[]}
           path="/shop/discount"

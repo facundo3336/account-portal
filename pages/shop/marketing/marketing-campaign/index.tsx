@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { Button, ButtonColor } from "../../../../components/Button/Button";
 import { Card } from "../../../../components/Card/Card";
 import { Layout } from "../../../../components/Layout/Layout";
+import { ReadMore } from "../../../../components/Read-more/ReadMore";
 import { Title } from "../../../../components/Title/Title";
 import styles from "./MarketingCampaign.module.scss";
 
@@ -119,9 +120,11 @@ const MarketingPage: NextPage = () => {
             </div>
           </Card>
         </div>
-        <div className={styles.readMore}>
-          Leer más acerca de <a href="#">campañas de marketing</a>
-        </div>
+        <ReadMore
+          link="#"
+          linkText="campañas de marketing"
+          description="Leer más acerca de"
+        />
       </div>
     </Layout>
   );

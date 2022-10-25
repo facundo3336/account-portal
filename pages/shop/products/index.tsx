@@ -3,7 +3,11 @@ import { InfoCard } from "../../../components/Info-Card/Info-Card";
 import { Button, ButtonColor } from "../../../components/Button/Button";
 import styles from "./Products.module.scss";
 import { Layout } from "../../../components/Layout/Layout";
+
+import { ReadMore } from "../../../components/Read-more/ReadMore";
+
 import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
+
 
 const Products: NextPage = () => {
   return (
@@ -32,10 +36,12 @@ const Products: NextPage = () => {
             },
           ]}
         />
-        <div className={styles.readMore}>
-          <p>Leer mas acerca de</p>
-          <a href="#">productos</a>
-        </div>
+        <ReadMore
+          link="#"
+          linkText="productos"
+          description="Leer mas acerca de"
+        />
+      </div>
       </StorePagesContainer>
     </Layout>
   );
