@@ -1,26 +1,11 @@
 @import "../../../styles/colors.scss";
 
-.customers {
-  padding-top: 50px;
-
-  h3 {
-    padding: 0 20px;
-  }
+.customersTitle {
+  padding: 0 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  .customers {
-    max-width: 700px;
-    padding-top: 10px;
-
-    h3 {
-      padding: 0;
-    }
-  }
-}
-
-@media screen and (min-width: 1340px) {
-  .customers {
-    max-width: 900px;
+  .customersTitle {
+    padding: 0;
   }
 }

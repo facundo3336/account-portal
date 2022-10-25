@@ -1,12 +1,9 @@
 @import "../../../styles/colors.scss";
 
-.marketingPage {
-  margin-top: 30px;
-}
-
 .marketingTitleContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 0 20px;
 }
@@ -51,15 +48,11 @@
 }
 
 @media screen and (min-width: 768px) {
-  .marketingPage {
-    padding: 50px;
-    margin-top: 0;
-  }
-
   .reportsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    padding: 0 20px;
   }
 
   .reportContainer {
@@ -75,28 +68,25 @@
   .marketingButton {
     margin-top: 20px;
   }
+}
 
-  .calendarSection {
+@media screen and (min-width: 1340px) {
+  .reportsContainer {
     padding: 0;
   }
 
   .marketingTitleContainer {
     padding: 0;
   }
-}
 
-@media screen and (min-width: 1024px) {
-  .marketingPage {
-    max-width: 700px;
+  .calendarSection {
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 1340px) {
-  .marketingPage {
-    max-width: 900px;
-  }
-
   .reportsContainer {
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
   }
 }

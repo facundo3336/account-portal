@@ -5,6 +5,7 @@ import { Card } from "../../../../components/Card/Card";
 import { InfoCard } from "../../../../components/Info-Card/Info-Card";
 import { Layout } from "../../../../components/Layout/Layout";
 import { ReadMore } from "../../../../components/Read-more/ReadMore";
+import { StorePagesContainer } from "../../../../components/StorePagesContainer/StorePagesContainer";
 import styles from "./AbandonedOrders.module.scss";
 
 const AbandonedOrders: NextPage = () => {
@@ -16,8 +17,8 @@ const AbandonedOrders: NextPage = () => {
 
   return (
     <Layout>
-      <div className={styles.abandonedOrders}>
-        <h3>Pedidos abandonados</h3>
+      <StorePagesContainer>
+        <h3 className={styles.abandonedOrdersTitle}>Pedidos abandonados</h3>
         {close && (
           <Card size="info">
             <div className={styles.updateSection}>
@@ -59,7 +60,9 @@ const AbandonedOrders: NextPage = () => {
           linkText="pedidos abandonados"
           description="Leer más acerca de"
         />
-      </div>
+      </div>    
+      </StorePagesContainer>
+
     </Layout>
   );
 };

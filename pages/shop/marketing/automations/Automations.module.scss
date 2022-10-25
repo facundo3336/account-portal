@@ -1,12 +1,5 @@
 @import "../../../../styles/colors.scss";
 
-.marketingCampaignInfoContainer {
-  h3 {
-    font-size: 1rem;
-    margin-top: 20px;
-  }
-}
-
 .automationsPage {
   padding-bottom: 50px;
 }
@@ -21,6 +14,11 @@
   align-items: center;
   padding: 20px;
   margin-bottom: 20px;
+
+  h3 {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
 }
 
 .marketingCampaignInfoSection {
@@ -223,11 +221,5 @@
 
   .resultsTitle {
     padding: 0;
-  }
-}
-
-@media screen and (min-width: 1340px) {
-  .automationsPage {
-    max-width: 900px;
   }
 }

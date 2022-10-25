@@ -1,9 +1,5 @@
 @import "../../../styles/colors.scss";
 
-.products {
-  padding-top: 30px;
-}
-
 .productsTitle {
   padding: 0 20px;
   display: flex;
@@ -17,18 +13,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .products {
-    max-width: 700px;
-    padding-top: 10px;
-  }
-
   .productsTitle {
     padding: 0;
-  }
-}
-
-@media screen and (min-width: 1340px) {
-  .products {
-    max-width: 900px;
   }
 }

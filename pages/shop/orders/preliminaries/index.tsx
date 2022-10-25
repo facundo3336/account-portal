@@ -4,12 +4,13 @@ import { Layout } from "../../../../components/Layout/Layout";
 import { ButtonColor } from "../../../../components/Button/Button";
 import styles from "./Preliminaries.module.scss";
 import { ReadMore } from "../../../../components/Read-more/ReadMore";
+import { StorePagesContainer } from "../../../../components/StorePagesContainer/StorePagesContainer";
 
 const Preliminaries: NextPage = () => {
   return (
     <Layout>
-      <div className={styles.preliminaries}>
-        <h3>Preliminares</h3>
+      <StorePagesContainer>
+        <h3 className={styles.preliminariesTitle}>Preliminares</h3>
         <InfoCard
           buttons={[
             {
@@ -23,12 +24,16 @@ const Preliminaries: NextPage = () => {
           description="Usa pedidos preliminares para recibir pedidos por teléfono, enviar facturas a clientes por correo electrónico y cobrar pagos."
         />
 
+
         <ReadMore
           link="#"
           description="Más información acerca de"
           linkText="crear pedidos preliminares"
         />
       </div>
+
+      </StorePagesContainer>
+
     </Layout>
   );
 };
