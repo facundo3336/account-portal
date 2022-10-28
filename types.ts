@@ -16,3 +16,14 @@ export interface QuestionnaireData {
     description?: string;
   }[];
 }
+
+export interface FilterProps {
+  filterName: string;
+  multiple: boolean;
+  items: {
+    id: string;
+    label: string;
+  }[];
+  value: string | string[];
+  onChange: (value: string | string[]) => void;
+}
