@@ -1,0 +1,26 @@
+.moreFilters {
+  max-width: 120px;
+}
+
+.filtersButton {
+  margin-top: 30px;
+}
+
+.filtersContainer {
+  width: 300px;
+  background-color: white;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &.hideFilters {
+    right: -300px;
+  }
+}
