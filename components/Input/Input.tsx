@@ -11,6 +11,7 @@ interface Props {
   value: string;
   onChange: (value: string) => void;
   placerholder?: string;
+  imageUrl?: string;
 }
 
 export const Input = ({
@@ -20,6 +21,7 @@ export const Input = ({
   value,
   onChange,
   placerholder,
+  imageUrl,
 }: Props) => {
   return (
     <div className={styles.inputContainer}>
@@ -28,6 +30,11 @@ export const Input = ({
         {link && <Link href={link.url}>{link.label}</Link>}
       </div>
       <input
+        style={
+          imageUrl !== undefined
+            ? { backgroundImage: "url(" + imageUrl + ")" }
+            : { backgroundImage: "none" }
+        }
         placeholder={placerholder}
         onChange={(e) => onChange(e.target.value)}
         value={value}
