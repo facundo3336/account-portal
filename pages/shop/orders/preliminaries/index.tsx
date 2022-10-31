@@ -5,8 +5,13 @@ import { ButtonColor } from "../../../../components/Button/Button";
 import styles from "./Preliminaries.module.scss";
 import { ReadMore } from "../../../../components/Read-more/ReadMore";
 import { StorePagesContainer } from "../../../../components/StorePagesContainer/StorePagesContainer";
+import Router from "next/router";
 
 const Preliminaries: NextPage = () => {
+  const onClickRedirect = () => {
+    Router.push("/shop/orders/preliminaries/create");
+  };
+
   return (
     <Layout>
       <StorePagesContainer>
@@ -15,7 +20,7 @@ const Preliminaries: NextPage = () => {
           buttons={[
             {
               text: "Crear pedido preliminar",
-              onClick: () => {},
+              onClick: onClickRedirect,
               color: ButtonColor.Primary,
             },
           ]}

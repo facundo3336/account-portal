@@ -31,10 +31,14 @@
 }
 
 .input {
-  padding: 7px;
+  padding: 10px 7px 10px 40px;
   border-radius: 5px;
   border: 2px solid map-get($colors, "lighterGrey");
   width: 100%;
+  background-position: left;
+  background-position-x: 10px;
+  background-repeat: no-repeat;
+  background-size: 20px;
 }
 
 @media screen and (min-width: 1024px) {
