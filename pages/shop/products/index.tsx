@@ -5,8 +5,13 @@ import styles from "./Products.module.scss";
 import { Layout } from "../../../components/Layout/Layout";
 import { ReadMore } from "../../../components/Read-more/ReadMore";
 import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
+import Router from "next/router";
 
 const Products: NextPage = () => {
+  const onClickRedirect = (path: string) => {
+    Router.push(path);
+  };
+
   return (
     <Layout>
       <StorePagesContainer>
@@ -28,7 +33,9 @@ const Products: NextPage = () => {
             },
             {
               text: "Agregar productos",
-              onClick: () => {},
+              onClick: () => {
+                onClickRedirect("/shop/products/add");
+              },
               color: ButtonColor.Primary,
             },
           ]}

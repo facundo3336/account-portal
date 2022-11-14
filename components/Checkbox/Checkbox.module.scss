@@ -3,6 +3,7 @@
 .checkBoxContainer {
   display: flex;
   justify-content: center;
+
   label {
     display: flex;
     justify-content: space-between;
@@ -15,7 +16,7 @@
 }
 
 .inputContainer {
-  width: 10%;
+  width: 20px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -33,6 +34,7 @@
   transition-duration: 0.3s;
   background-color: white;
   border: 1px solid black;
+  margin: 0;
 
   &:hover {
     cursor: pointer;
@@ -60,10 +62,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 0;
 
   span {
     font-weight: 500;
+    text-align: left;
   }
 
   &:hover {

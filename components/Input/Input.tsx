@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./Input.module.scss";
 
 interface Props {
-  type: "text" | "email" | "password";
+  type: "text" | "email" | "password" | "number";
   label?: string;
   link?: {
     label: string;
