@@ -1,0 +1,179 @@
+@import "../../../../styles/colors.scss";
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  h3 {
+    margin: 0 10px;
+  }
+
+  button {
+    width: 45px;
+    padding: 5px 0;
+  }
+}
+
+.addFromUrl {
+  color: blue;
+  margin-left: 20px;
+  font-weight: 500;
+  text-decoration: underline;
+
+  &:hover {
+    color: map-get($colors, "lightBlue");
+    text-decoration: none;
+  }
+}
+
+.addArchives {
+  background-color: map-get($colors, "primary-100");
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  font-weight: 500;
+
+  &:hover {
+    color: map-get($colors, "grey");
+  }
+}
+
+.descriptionTitle {
+  margin: 30px 0 10px 0;
+}
+
+.editor {
+  border: 1px solid map-get($colors, "lighterGrey");
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.mediaContainer {
+  border-radius: 5px;
+  height: 150px;
+  border: 2.5px dotted map-get($colors, "lighterGrey");
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: map-get($colors, "backgroundLighterGrey");
+    border-color: map-get($colors, "primary-400");
+  }
+}
+
+.articlePrice {
+  padding-top: 20px;
+
+  span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: map-get($colors, "lightGrey");
+  }
+}
+
+.priceInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.collectTaxes {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+
+.inventaryInputs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.inventoryCheckboxes {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.shipmentsCheckbox {
+  width: 240px;
+}
+
+.weightContainer {
+  h5 {
+    font-size: 1.05rem;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: map-get($colors, "grey");
+  }
+}
+
+.countrySelectContainer {
+  h5 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: map-get($colors, "grey");
+  }
+}
+
+.productOptions {
+  max-width: 420px;
+}
+
+.publicationTitleSection {
+  p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    max-width: 200px;
+  }
+}
+
+.publicationInputsContainer {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.productOrganization {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .titleContainer {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .pageContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .rightContainer {
+      width: 30%;
+    }
+
+    .leftContainer {
+      width: 68%;
+    }
+  }
+}
