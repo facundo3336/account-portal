@@ -5,8 +5,13 @@ import { ButtonColor } from "../../../../components/Button/Button";
 import { StorePagesContainer } from "../../../../components/StorePagesContainer/StorePagesContainer";
 import styles from "./Transfers.module.scss";
 import { ReadMore } from "../../../../components/Read-more/ReadMore";
+import Router from "next/router";
 
 const Transfers: NextPage = () => {
+  const onClickRedirect = () => {
+    Router.push("/shop/products/transfers/create");
+  };
+
   return (
     <Layout>
       <StorePagesContainer>
@@ -15,7 +20,7 @@ const Transfers: NextPage = () => {
           buttons={[
             {
               text: "Crear transferencia",
-              onClick: () => {},
+              onClick: onClickRedirect,
               color: ButtonColor.Primary,
             },
           ]}
