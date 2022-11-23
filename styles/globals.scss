@@ -30,6 +30,15 @@ a {
   user-select: none;
 }
 
+.selectTextDisable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 @media screen and (min-width: 768px) {
   .sideSpacing {
     padding-left: 40px;
