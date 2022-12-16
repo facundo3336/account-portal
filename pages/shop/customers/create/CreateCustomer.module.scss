@@ -1,0 +1,66 @@
+@import "../../../../styles/colors.scss";
+
+.pageContainer {
+  padding-bottom: 30px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 20px 20px 20px;
+
+  button {
+    margin-right: 30px;
+    padding: 5px;
+    max-width: 50px;
+  }
+}
+
+.greyLine {
+  width: 100%;
+  height: 1px;
+  background-color: map-get($colors, "lighterGrey");
+}
+
+.nameSurnameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.inputContainer {
+  margin: 15px 0;
+}
+
+.generalInfoContainer,
+.directionContainer,
+.texesContainer {
+  h3 {
+    font-size: 0.9rem;
+    padding: 0 20px 0 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .generalInfoContainer,
+  .directionContainer,
+  .texesContainer {
+    display: flex;
+
+    h3 {
+      width: 30%;
+      padding: 10px 0 0 0;
+    }
+  }
+
+  .titleContainer {
+    padding: 0 0 20px 0;
+  }
+
+  .nameSurnameContainer {
+    flex-direction: row;
+    gap: 15px;
+    margin: 0;
+  }
+}

@@ -2,11 +2,12 @@
 
 .checkBoxContainer {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   label {
     display: flex;
-    justify-content: space-between;
+
     gap: 10px;
+    width: 100%;
   }
 
   &:hover {
@@ -15,7 +16,7 @@
 }
 
 .inputContainer {
-  width: 10%;
+  width: 30px;
   margin-top: auto;
   margin-bottom: auto;
 }
