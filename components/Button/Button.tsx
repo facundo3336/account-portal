@@ -12,6 +12,8 @@ export enum ButtonColor {
   Secondary700 = "secondary-700",
   Default = "default",
   Grey = "grey",
+  White = "white",
+  Link = "link",
 }
 
 interface Props {

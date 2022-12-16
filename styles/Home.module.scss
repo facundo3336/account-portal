@@ -29,6 +29,13 @@
   }
 }
 
+.registrationButtons {
+  justify-content: center;
+  padding-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
 .indexPageHeaderContainer {
   background-color: map-get($colors, "primary");
   color: white;

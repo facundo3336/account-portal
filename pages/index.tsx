@@ -10,6 +10,14 @@ import styles from "../styles/Home.module.scss";
 const Home: NextPage = () => {
   const [email, setEmail] = useState("");
 
+  const onClickRegistration = () => {
+    Router.push("/register");
+  };
+
+  const onClickLogin = () => {
+    Router.push("/login");
+  };
+
   const onChangeEmail = (value: string) => {
     setEmail(value);
   };
@@ -42,6 +50,14 @@ const Home: NextPage = () => {
                 color={ButtonColor.Secondary700}
               >
                 Prueba gratis
+              </Button>
+            </div>
+            <div className={styles.registrationButtons}>
+              <Button onClick={onClickLogin} color={ButtonColor.White}>
+                Logeate
+              </Button>
+              <Button onClick={onClickRegistration} color={ButtonColor.White}>
+                Registrate
               </Button>
             </div>
             <p>
