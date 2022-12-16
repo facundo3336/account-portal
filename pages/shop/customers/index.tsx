@@ -5,8 +5,13 @@ import styles from "./Customers.module.scss";
 import { ButtonColor } from "../../../components/Button/Button";
 import { ReadMore } from "../../../components/Read-more/ReadMore";
 import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
+import Router from "next/router";
 
 const Customers: NextPage = () => {
+  const onClickRedirect = () => {
+    Router.push("/shop/customers/create");
+  };
+
   return (
     <Layout>
       <StorePagesContainer>
@@ -23,7 +28,7 @@ const Customers: NextPage = () => {
             },
             {
               text: "Agregar cliente",
-              onClick: () => {},
+              onClick: onClickRedirect,
               color: ButtonColor.Primary,
             },
           ]}
