@@ -25,6 +25,31 @@
     font-size: 1.1rem;
   }
 
+  &.link {
+    background-color: transparent;
+    border: none;
+    color: map-get($colors, "blue");
+    padding: 0;
+    text-decoration: underline;
+
+    &:hover {
+      color: map-get($colors, "lightBlue");
+    }
+  }
+
+  &.white {
+    width: auto;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 0;
+    text-decoration: underline;
+
+    &:hover {
+      color: map-get($colors, "lighterGrey");
+    }
+  }
+
   &.grey {
     background-color: white;
     border-color: map-get($colors, "lighterGrey");
