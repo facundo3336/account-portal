@@ -1,0 +1,28 @@
+@import "../../styles/colors.scss";
+
+.container {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: map-get($colors, "transparentGrey");
+}
+
+.content {
+  background-color: white;
+  height: 100%;
+  transition: height 0.1s;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-top: 50px;
+  }
+
+  .content {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}

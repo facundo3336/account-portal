@@ -5,10 +5,12 @@ import styles from "./Customers.module.scss";
 import { ButtonColor } from "../../../components/Button/Button";
 import { ReadMore } from "../../../components/Read-more/ReadMore";
 import { StorePagesContainer } from "../../../components/StorePagesContainer/StorePagesContainer";
+import { Popup } from "../../../components/Popup/Popup";
 
 const Customers: NextPage = () => {
   return (
     <Layout>
+      <Popup>Hola</Popup>
       <StorePagesContainer>
         <h3 className={styles.customersTitle}>Clientes</h3>
         <InfoCard
