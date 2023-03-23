@@ -23,7 +23,7 @@ export const NavigationButton = ({
     }
 
     setIsActive(false);
-  }, [indexActive]);
+  }, [indexActive, index]);
 
   const activeClass = isActive ? styles["buttonActive"] : "";
 

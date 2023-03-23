@@ -26,7 +26,7 @@ export const QuestionnaireOption = ({
     } else {
       setIsSelected(false);
     }
-  }, [selectedIndex]);
+  }, [selectedIndex, index]);
 
   return (
     <div

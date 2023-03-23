@@ -16,7 +16,7 @@ const ShopQuestionnaire: NextPage = () => {
 
   useEffect(() => {
     setPercentageBar(perecentageCompleted(countInfo, info));
-  }, [countInfo]);
+  }, [countInfo, info]);
 
   const onClickRedirect = () => {
     Router.push("/shop/home");

@@ -61,7 +61,10 @@ export const Filter = ({
           }
 
           return (
-            <div className={styles.filterInput + " " + optionClass}>
+            <div
+              key={item.id}
+              className={styles.filterInput + " " + optionClass}
+            >
               <label>
                 <input
                   checked={checkedValue}

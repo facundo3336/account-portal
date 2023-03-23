@@ -17,7 +17,7 @@
     background-color: map-get($colors, "lighterGrey");
   }
 
-  &[aria-selected="true"] {
+  &.selected {
     background-color: map-get($colors, "backgroundLighterGrey");
     border-color: map-get($colors, "secondary");
     border-bottom-left-radius: 0;

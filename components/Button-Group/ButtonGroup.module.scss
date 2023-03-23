@@ -20,7 +20,7 @@
     border-color: map-get($colors, "lightGrey");
   }
 
-  &[aria-selected="true"] {
+  &.selected {
     border-color: map-get($colors, "primary");
   }
 }

@@ -1,4 +1,5 @@
 import styles from "./ButtonGroup.module.scss";
+import clsx from "clsx";
 
 interface Props {
   items: {
@@ -13,11 +14,13 @@ export const ButtonGroup = ({ items, value, onClick }: Props) => {
   return (
     <div className={styles.buttonsGroup}>
       {items.map((item) => {
+        const classNames = clsx(styles.buttonsGroupButton, {
+          [styles.selected]: true,
+        });
         return (
           <button
             onClick={() => onClick(item.value)}
-            aria-selected={value === item.value}
-            className={styles.buttonsGroupButton}
+            className={classNames}
             key={item.value}
           >
             {item.label}
