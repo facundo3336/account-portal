@@ -153,8 +153,8 @@ const Adress: NextPage = () => {
         </Card>
         <div className={styles.step2Terms}>
           <p>
-            Clickeando en "Entrar a mi tienda" estas de acuerdo con Eshopuy{" "}
-            <Link href="/">Terminos y condiciones</Link> y{" "}
+            Clickeando en &quot;Entrar a mi tienda&quot; estas de acuerdo con
+            Eshopuy <Link href="/">Terminos y condiciones</Link> y{" "}
             <Link href="/">Politica de privacidad</Link>
           </p>
         </div>

@@ -103,8 +103,8 @@ const Home: NextPage = () => {
         <section className={styles.indexComentarySection + " sideSpacing"}>
           <div>
             <p>
-              "Shopify es mejor que cualquier otra plataforma con la que hayamos
-              trabajado, ¡y vaya si hemos probado!".
+              &quot;Shopify es mejor que cualquier otra plataforma con la que
+              hayamos trabajado, ¡y vaya si hemos probado!&quot;.
             </p>
             <strong>JONATHAN BAYME, CEO DE THEORY11</strong>
             <div className={styles.indexTryFreButton}>
