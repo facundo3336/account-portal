@@ -1,4 +1,4 @@
-This project is a demo, is only for practice and to improve my skills.
+This project is a demo, is only for practice and to improve my skills. It continues in development.
 
 In this project I used `React` , `NextJs` and `Typescript`
 
