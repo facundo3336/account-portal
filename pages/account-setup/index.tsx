@@ -3,12 +3,14 @@ import Router from "next/router";
 import { useState } from "react";
 import { Button, ButtonColor } from "../../components/Button/Button";
 import { Card } from "../../components/Card/Card";
-import { Dropdown } from "../../components/Dropdown/Dropdown";
-import { DropdownItem } from "../../components/DropdownItem/DropdownItem";
 import { LoggedIn } from "../../components/LoggedIn/LoggedIn";
 import { Select } from "../../components/Select/Select";
 import styles from "./AccountSetup.module.scss";
-import { operatingOptions, revenueOptions, sellingOptions } from "./variables";
+import {
+  operatingOptions,
+  revenueOptions,
+  sellingOptions,
+} from "../../data/variables";
 
 const AccountSetup: NextPage = () => {
   const [values, setValues] = useState({
