@@ -5,8 +5,8 @@ interface Props {
   children?: React.ReactNode;
   border?: boolean;
   transparent: boolean;
-  center: boolean;
-  logo: boolean;
+  center?: boolean;
+  logo?: boolean;
 }
 
 export const Header = ({
